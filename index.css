@@ -1,0 +1,417 @@
+@font-face {
+    font-family: 'Another Typewriter';
+    src: url('atwriter.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Another Typewriter';
+}
+
+body {
+    background-color: black;
+    color: white;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+/* Header */
+
+header {
+    position: sticky;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    z-index: 2;
+    display: none;
+}
+
+/* Main Body */
+
+.wrapper.landing {
+    padding: 0;
+    height: 100vh;
+}
+
+.landing-main {
+    background-color: white;
+    width: 100%;
+    height: 80%;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-main--content {
+    text-align: center;
+    font-size: 1.2em;
+    flex-grow: 1;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1em;
+}
+
+.landing-main--content--title {
+    font-size: 1.8em;
+    margin-bottom: .6rem;
+}
+
+.landing-main--content--content {
+    font-size: 1.1em;
+}
+
+.landing-main--image {
+    height: 40%;
+}
+
+.landing-main--image img {
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.landing-extra {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2em 1em;
+    align-items: center;
+}
+
+.wrapper:nth-child(3) {
+    padding: 2.5em 1em 3em;
+}
+
+.wrapper-image {
+    width: 65%;
+    max-width: 250px;
+    margin-bottom: 2.8em;
+}
+
+#about-us-image {
+    background-color: white;
+    color: black;
+    font-size: 2em;
+    width: 100%;
+    padding: 20% 0;
+    transform: rotate(13deg);
+    display: inline-block;
+    text-align: center;
+}
+
+.wrapper-content {
+    text-align: center;
+    width: 100%;
+}
+
+.wrapper-content--title {
+    font-size: 2em;
+    margin-bottom: .4em;
+}
+
+.divider {
+    height: 4em;
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.6em;
+}
+
+.grid-cell {
+    width: 46%;
+    margin-bottom: 1em;
+}
+
+.grid-image {
+    width: 100%;
+    padding-top: 100%;
+    background-color: white;
+    margin-bottom: .8em;
+}
+
+.grid-content {
+    font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+    .wrapper, .wrapper.landing {
+        padding: 3em max(1em, calc(50% - 600px)) 0;
+        flex-direction: column;
+    }
+
+    .wrapper:nth-child(3) {
+        padding: 4.5em max(1em, calc(50% - 600px)) 7em;
+    }
+
+    .landing-main {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 8em;
+        height: 75%;
+    }
+
+    .landing-main--content {
+        height: 100%;
+        text-align: left;
+        padding: 0 0 5em;
+        max-width: 50%;
+    }
+
+    .landing-main--image {
+        height: 65%;
+    }
+
+    .landing-main--content--title {
+        font-size: 3.2em;
+    }
+
+    .landing-main--content--content {
+        font-size: 1.6em;
+    }
+
+    .landing-extra {
+        font-size: 2.2em;
+    }
+
+    .wrapper {
+        flex-direction: row;
+    }
+
+    .wrapper-image {
+        max-width: 400px;
+        margin-bottom: 0;
+        margin-right: 6.5em;
+    }
+
+    .wrapper-content {
+        text-align: left;
+    }
+
+    .wrapper-content--title {
+        font-size: 3.2em;
+    }
+
+    .wrapper-content--content {
+        font-size: 1.6em;
+    }
+
+    .grid {
+        justify-content: flex-start;
+    }
+
+    .grid-cell {
+        width: 25%;
+        text-align: center;
+        padding: 1em;
+    }
+}
+
+/* Terminal */
+
+.terminal-wrapper {
+    padding: 0 5px;
+    position: relative;
+    line-height: 1.4em;
+}
+
+.terminal-wrapper, .terminal-wrapper * {
+    font-family: monospace;
+    font-size: 14px;
+    color: #ccccbf;
+}
+
+.terminal-details {
+    padding-left: 2em;
+    position: relative;
+}
+
+.terminal-command {
+    padding-left: 1em;
+    position: relative;
+}
+
+.terminal-details:before {
+    content: "";
+    position: absolute;
+    width: calc(2em - 2px);
+    top: 50%;
+    left: 0;
+    height: .5px;
+    background-color: #12920e;
+}
+
+.terminal-command:before {
+    content: "";
+    position: absolute;
+    width: calc(1em - 2px);
+    top: 50%;
+    left: 0;
+    height: .5px;
+    background-color: #12920e;
+}
+
+.terminal-details:after {
+    content: "";
+    position: absolute;
+    width: .5px;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    background-color: #12920e;
+}
+
+.terminal-command:after {
+    content: "";
+    position: absolute;
+    width: .5px;
+    top: 0;
+    left: 0;
+    bottom: 50%;
+    background-color: #12920e;
+}
+
+.terminal-blue {
+    color: #3671f8;
+}
+
+.terminal-green {
+    color: #12920e;
+}
+
+.terminal-red {
+    color: #d94856;
+}
+
+.terminal-cursor {
+    height: 4px;
+    width: 8px;
+    background: #ccccbf;
+    display: inline-block;
+    vertical-align: text-bottom;
+    animation: blinkCursor .6s infinite alternate;
+}
+
+.terminal-wrapper input {
+    position: absolute;
+    bottom: 0;
+    left: 2em;
+    z-index: -1;
+    opacity: 0;
+}
+
+.terminal {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    background-color: black;
+    transition: top .6s;
+    padding-top: 5px;
+}
+
+.show-terminal .terminal {
+    top: 0;
+}
+
+@keyframes blinkCursor {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 1
+    }
+    55% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+/* Intro terminal */
+
+.intro-head, .intro-foot, .intro-body {
+    padding-left: 1em;
+    position: relative;
+}
+
+.intro-head:before {
+    content: "";
+    position: absolute;
+    width: calc(1em - 2px);
+    top: 50%;
+    left: 0;
+    height: 2px;
+    background-color: #ccccbf;
+}
+
+.intro-foot:before {
+    content: "";
+    position: absolute;
+    width: calc(1em - 2px);
+    top: 50%;
+    left: 0;
+    height: 2px;
+    background-color: #ccccbf;
+}
+
+.intro-head:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    background-color: #ccccbf;
+}
+
+.intro-foot:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 0;
+    left: 0;
+    bottom: 50%;
+    background-color: #ccccbf;
+}
+
+.intro-body:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ccccbf;
+}
