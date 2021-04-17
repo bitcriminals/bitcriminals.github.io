@@ -67,7 +67,7 @@ function initializeDirectory() {
         and have directories for each teammate where they can put something about themselves<br>
         or whatever<br>
         i_have_seen_the_real_website<br>
-        DM me the flag and if you like the idea`
+        DM me the flag and if you like the idea or not`
     };
 }
 
