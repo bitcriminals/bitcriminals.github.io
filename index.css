@@ -29,14 +29,32 @@ body {
 /* Header */
 
 header {
-    position: sticky;
+    position: fixed;
     background-color: black;
     top: 0;
     left: 0;
     right: 0;
-    height: 30px;
     z-index: 2;
-    display: none;
+    padding: 1em 0;
+    transform: translateY(-120%);
+    transition: transform .4s;
+}
+
+header.active {
+    transform: translateY(0);
+}
+
+.header--image {
+    filter: invert(100%);
+    height: 30px;
+    display: block;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 1.4em 0;
+    }
 }
 
 /* Main Body */
