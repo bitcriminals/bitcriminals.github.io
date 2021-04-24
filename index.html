@@ -9,10 +9,37 @@
 </head>
 <body>
     <header>
-        <img src="images/0xdead.png" alt="" class="header--image">
+        <div class="header--left hidden">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="#landing" class="header--image">
+            <img src="images/0xdead.png" alt="">
+        </a>
+        <div class="header--right menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="header--right menu">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Crimes</a>
+                </li>
+                <li>
+                    <a href="">Reports</a>
+                </li>
+                <li>
+                    <a href="">Members</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
-        <div class="wrapper landing">
+        <div class="wrapper landing" id="landing">
             <div class="landing-main">
                 <div class="landing-main--content">
                     <div class="landing-main--content--title">
@@ -200,6 +227,7 @@
     </footer>
     <div class="terminal">
     </div>
+    <script src="https://kit.fontawesome.com/4e16efa13b.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 </html>

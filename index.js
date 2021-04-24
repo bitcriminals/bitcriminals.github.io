@@ -188,3 +188,7 @@ function headerActivator() {
 
 let headerActivated = false;
 window.addEventListener('scroll', debounce(headerActivator, 10));
+
+document.querySelector('.header--right.menu-icon').addEventListener('click', function() {
+    document.querySelector('.header--right.menu').classList.toggle('active');
+});
