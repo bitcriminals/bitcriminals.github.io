@@ -1,0 +1,18 @@
+header {
+    position: sticky;
+    transform: translateY(0);
+}
+
+main {
+    padding: 1em 1.2em;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 3em max(1em, calc(50% - 600px)) 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

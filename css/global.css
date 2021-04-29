@@ -128,3 +128,18 @@ header a {
         font-size: 1.6em;
     }
 }
+
+/* Footer */
+
+footer {
+    text-align: center;
+    font-size: 1em;
+    padding: .4em;
+    margin-top: 1.2em;
+}
+
+@media (min-width: 768px) {
+    footer {
+        font-size: 1.4em;
+    }
+}

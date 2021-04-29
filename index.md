@@ -269,5 +269,6 @@ layout: blank
     <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/global.js"></script>
 </body>
 </html>
