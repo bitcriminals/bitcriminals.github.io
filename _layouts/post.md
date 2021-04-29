@@ -13,6 +13,7 @@
     {% include header.html %}
     <main>
         <h1>{{page.title}}</h1>
+        <p class="author">{{page.author}}</p>
         {{content}}
     </main>
     {% include footer.html %}
