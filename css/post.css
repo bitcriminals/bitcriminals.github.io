@@ -1,3 +1,7 @@
+* {
+    font-weight: normal
+}
+
 header {
     position: sticky;
     transform: translateY(0);
