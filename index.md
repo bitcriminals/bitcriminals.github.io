@@ -1,10 +1,14 @@
+---
+permalink: /
+---
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bit Criminals</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/png" sizes="64x64" href="images/myfavicon.png">
 </head>
 <body>
@@ -121,7 +125,6 @@
                             </div>
                             <div class="grid-content">ReversedEyes</div>
                         </div>
-
                         <div class="grid-cell">
                             <div class="grid-image">
                                 <img src="images/MaskdMafia.jpg" alt="">
@@ -137,7 +140,6 @@
                             <div class="grid-image-overlay"></div>
                             <div class="grid-content">MaskdMafia</div>
                         </div>
-
                         <div class="grid-cell">
                             <div class="grid-image"><img src="images/panda.jpg" alt="">
                                 <div class="grid-image-overlay">
@@ -280,6 +282,6 @@
     <div class="terminal">
     </div>
     <script src="https://kit.fontawesome.com/4e16efa13b.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
