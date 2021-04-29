@@ -2,6 +2,10 @@
     font-weight: normal
 }
 
+:root {
+    font-size: 1.1em;
+}
+
 header {
     position: sticky;
     transform: translateY(0);
@@ -9,6 +13,10 @@ header {
 
 main {
     padding: 1em 1.2em;
+}
+
+p {
+    font-size: 1.1em;
 }
 
 p.author {
