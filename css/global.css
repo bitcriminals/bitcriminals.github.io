@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Another Typewriter';
-    src: url('assets/atwriter.ttf');
+    src: url('/assets/atwriter.ttf');
 }
 
 * {

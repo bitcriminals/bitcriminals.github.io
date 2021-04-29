@@ -17,6 +17,6 @@
     </main>
     {% include footer.html %}
     <script src="https://kit.fontawesome.com/4e16efa13b.js" crossorigin="anonymous"></script>
-    <script src="/global.js"></script>
+    <script src="/js/global.js"></script>
 </body>
 </html>
