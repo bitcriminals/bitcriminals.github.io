@@ -229,15 +229,13 @@ document.querySelector('.header--right.menu-icon').addEventListener('click', fun
     document.querySelector('.header--right.menu').classList.toggle('active');
 });
 
-new Flickity( '.main-carousel', {
-    cellAlign: 'left',
-    contain: true,
-    groupCells: true,
-    pageDots: false
-});
-
-
 window.addEventListener('load', () => {
+    new Flickity( '.main-carousel', {
+        cellAlign: 'left',
+        contain: true,
+        groupCells: true,
+        pageDots: false
+    });
     document.querySelector('body').classList.add('loaded');
     setTimeout(typerTitle, 500);
 });
