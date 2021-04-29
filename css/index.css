@@ -231,12 +231,9 @@ header a {
 }
 
 .writeup-grid {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: space-between;
     width: 100%;
     margin-top: 1.6em;
+    margin-bottom: .6em;
 }
 
 .grid-cell {
@@ -245,8 +242,9 @@ header a {
 }
 
 .writeup-grid-cell {
-    width: 46%;
+    width: 50%;
     margin-bottom: 1em;
+    padding: 0 2%;
 }
 
 .grid-image {
@@ -280,6 +278,12 @@ header a {
 .writeup-grid-content {
     font-size: 1.2em;
 }
+
+.wrapper-content--content button {
+    padding: .5em 1em;
+    font-size: .9em;
+}
+
 @media (min-width: 768px) {
     .wrapper, .wrapper.landing {
         padding: 3em max(1em, calc(50% - 600px)) 0;
@@ -335,6 +339,10 @@ header a {
         text-align: left;
     }
 
+    .wrapper-content--content.center-align {
+        text-align: center;
+    }
+
     .wrapper-content--title {
         font-size: 3.2em;
     }
@@ -353,14 +361,20 @@ header a {
         padding: 1em;
     }
 
-    .writeup-grid {
-        justify-content: flex-start;
-    }
-
     .writeup-grid-cell {
         width: 25%;
         text-align: center;
         padding: 1em;
+    }
+
+    .flickity-button {
+        background-color: black;
+        color: white;
+    }
+
+    .flickity-button:hover {
+        background-color: black;
+        color: white
     }
 }
 

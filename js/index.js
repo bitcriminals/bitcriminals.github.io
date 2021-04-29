@@ -192,3 +192,10 @@ window.addEventListener('scroll', debounce(headerActivator, 10));
 document.querySelector('.header--right.menu-icon').addEventListener('click', function() {
     document.querySelector('.header--right.menu').classList.toggle('active');
 });
+
+new Flickity( '.main-carousel', {
+    cellAlign: 'left',
+    contain: true,
+    groupCells: true,
+    pageDots: false
+});

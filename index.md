@@ -9,8 +9,9 @@ layout: blank
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bit Criminals</title>
-    <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/png" sizes="64x64" href="images/myfavicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
@@ -87,21 +88,36 @@ layout: blank
                 <div class="wrapper-content--title">
                     Our Crime Reports
                 </div>
-                <div class="wrapper-content--content">
-                    <div class="writeup-grid">
-                        <div class="writeup-grid-cell">
+                <div class="wrapper-content--content center-align">
+                    <div class="writeup-grid main-carousel">
+                        <div class="writeup-grid-cell carousel-cell">
                             <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
                             <div class="writeup-grid-content">Test Mode</div>
                         </div>
-                        <div class="writeup-grid-cell">
+                        <div class="writeup-grid-cell carousel-cell">
                             <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
                             <div class="writeup-grid-content">Test Mode</div>
                         </div>
-                        <div class="writeup-grid-cell">
+                        <div class="writeup-grid-cell carousel-cell">
+                            <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
+                            <div class="writeup-grid-content">Test Mode</div>
+                        </div>
+                        <div class="writeup-grid-cell carousel-cell">
+                            <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
+                            <div class="writeup-grid-content">Test Mode</div>
+                        </div>
+                        <div class="writeup-grid-cell carousel-cell">
+                            <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
+                            <div class="writeup-grid-content">Test Mode</div>
+                        </div>
+                        <div class="writeup-grid-cell carousel-cell">
                             <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
                             <div class="writeup-grid-content">Test Mode</div>
                         </div>
                     </div>
+                    <a href="">
+                        <button>See All Reports!</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -283,6 +299,7 @@ layout: blank
     <div class="terminal">
     </div>
     <script src="https://kit.fontawesome.com/4e16efa13b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
