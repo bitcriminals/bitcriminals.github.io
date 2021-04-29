@@ -11,40 +11,12 @@ layout: blank
     <title>Bit Criminals</title>
     <link rel="icon" type="image/png" sizes="64x64" href="images/myfavicon.png">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="loader"></div>
-    <header>
-        <div class="header--left hidden">
-            <i class="fas fa-bars"></i>
-        </div>
-        <a href="#landing" class="header--image">
-            <img src="images/0xdead.png" alt="">
-        </a>
-        <div class="header--right menu-icon">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="header--right menu">
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Crimes</a>
-                </li>
-                <li>
-                    <a href="">Reports</a>
-                </li>
-                <li>
-                    <a href="">Members</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+    {% include header.html %}
     <main>
         <div class="wrapper landing" id="landing">
             <div class="landing-main">
@@ -112,9 +84,9 @@ layout: blank
                             <div class="writeup-grid-content">Test Mode</div>
                         </div>
                     </div>
-                    <a href="">
+                    <!-- <a href="">
                         <button>See All Reports!</button>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -290,9 +262,7 @@ layout: blank
             </div>
         </div>
     </main>
-    <footer>
-        You need to make your way in !
-    </footer>
+    {% include footer.html %}
     <div class="terminal">
     </div>
     <script src="https://kit.fontawesome.com/4e16efa13b.js" crossorigin="anonymous"></script>
