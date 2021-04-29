@@ -1,5 +1,6 @@
 ---
 permalink: /
+layout: blank
 ---
 
 <html lang="en">
