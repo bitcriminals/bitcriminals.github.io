@@ -6,8 +6,8 @@
     <title>{{page.title}} | Bit Criminals</title>
     <link rel="icon" type="image/png" sizes="64x64" href="images/myfavicon.png">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/post.css">
 </head>
 <body>
     {% include header.html %}
