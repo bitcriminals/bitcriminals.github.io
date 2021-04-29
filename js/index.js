@@ -186,6 +186,42 @@ function headerActivator() {
     }
 }
 
+function typerTitle() {
+    let instance = new TypeIt('.landing-main--content--title', {
+        strings: 'B',
+        afterComplete: (step, instance) => {
+            instance.destroy();
+            typerContent();
+        }
+    })
+    .options({speed: 150})
+    .type('it ')
+    .pause(300)
+    .type('Criminals')
+    .pause(400)
+    .go();
+}
+
+function typerContent() {
+    let instance = new TypeIt('.landing-main--content--content', {
+        strings: 'A',
+        afterComplete: (step, instance) => {
+            instance.destroy();
+        }
+    })
+    .options({speed: 80})
+    .type(' bunch of people who like<br>')
+    .pause(300)
+    .options({speed: 100})
+    .type('hacking')
+    .pause(800)
+    .options({speed: 200})
+    .delete(7)
+    .options({speed: 50})
+    .type('committing crimes')
+    .go();
+}
+
 let headerActivated = false;
 window.addEventListener('scroll', debounce(headerActivator, 10));
 
@@ -198,4 +234,10 @@ new Flickity( '.main-carousel', {
     contain: true,
     groupCells: true,
     pageDots: false
+});
+
+
+window.addEventListener('load', () => {
+    document.querySelector('body').classList.add('loaded');
+    setTimeout(typerTitle, 500);
 });

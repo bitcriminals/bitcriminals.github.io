@@ -622,3 +622,18 @@ header a {
     transform: translate(-50%, -50%);
     text-align: center;
   }
+
+  .loader {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: black;
+      z-index: 20;
+      transition: top .5s;
+  }
+
+  .loaded .loader {
+      top: 100vh;
+  }

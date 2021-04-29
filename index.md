@@ -14,6 +14,7 @@ layout: blank
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <div class="loader"></div>
     <header>
         <div class="header--left hidden">
             <i class="fas fa-bars"></i>
@@ -48,12 +49,8 @@ layout: blank
         <div class="wrapper landing" id="landing">
             <div class="landing-main">
                 <div class="landing-main--content">
-                    <div class="landing-main--content--title">
-                        Bit Criminals
-                    </div>
-                    <div class="landing-main--content--content">
-                        A bunch of people who like committing crimes
-                    </div>
+                    <div class="landing-main--content--title"></div>
+                    <div class="landing-main--content--content"></div>
                 </div>
                 <div class="landing-main--image">
                     <img src="images/logo.png" alt="Bit Criminals Logo">
@@ -75,7 +72,7 @@ layout: blank
                     About Us
                 </div>
                 <div class="wrapper-content--content">
-                    We really are just a bunch of people who like committing crimes.</br>
+                    We really are just a bunch of people who like committing crimes.
                     <ul class="social-links">
                         <li><div class="icon-box"><a href="https://github.com/bitcriminals"><img src="images/github.png" height=50 width=50 alt=""></a></div></li>
                         <li><div class="icon-box"><a href="https://ctftime.org/team/151727"><img src="images/ctftime.png" height=50 width=50 alt=""></a></div></li>
@@ -299,6 +296,7 @@ layout: blank
     <div class="terminal">
     </div>
     <script src="https://kit.fontawesome.com/4e16efa13b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/index.js"></script>
 </body>
