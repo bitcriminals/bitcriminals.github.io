@@ -17,6 +17,11 @@ main {
 
 p {
     font-size: 1.1em;
+    color: #dadada;
+}
+
+p:not(.author) {
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 p.author {
