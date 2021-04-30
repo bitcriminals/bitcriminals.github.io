@@ -59,30 +59,12 @@ layout: blank
                 </div>
                 <div class="wrapper-content--content center-align">
                     <div class="writeup-grid main-carousel">
-                        <div class="writeup-grid-cell carousel-cell">
-                            <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
-                            <div class="writeup-grid-content">Test Mode</div>
-                        </div>
-                        <div class="writeup-grid-cell carousel-cell">
-                            <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
-                            <div class="writeup-grid-content">Test Mode</div>
-                        </div>
-                        <div class="writeup-grid-cell carousel-cell">
-                            <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
-                            <div class="writeup-grid-content">Test Mode</div>
-                        </div>
-                        <div class="writeup-grid-cell carousel-cell">
-                            <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
-                            <div class="writeup-grid-content">Test Mode</div>
-                        </div>
-                        <div class="writeup-grid-cell carousel-cell">
-                            <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
-                            <div class="writeup-grid-content">Test Mode</div>
-                        </div>
-                        <div class="writeup-grid-cell carousel-cell">
-                            <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
-                            <div class="writeup-grid-content">Test Mode</div>
-                        </div>
+                        {% for post in site.posts %}
+                            <a href="{{ post.url }}" class="writeup-grid-cell carousel-cell">
+                                <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
+                                <div class="writeup-grid-content">{{ post.title }}</div>
+                            </a>
+                        {% endfor %}
                     </div>
                     <!-- <a href="">
                         <button>See All Reports!</button>

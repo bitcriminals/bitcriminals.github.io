@@ -116,6 +116,7 @@
 }
 
 .writeup-grid-cell {
+    display: block;
     width: 50%;
     margin-bottom: 1em;
     padding: 0 2%;
