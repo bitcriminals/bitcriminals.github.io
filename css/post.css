@@ -16,12 +16,13 @@ main {
 }
 
 p {
-    font-size: 1.1em;
     color: #dadada;
 }
 
 p:not(.author) {
     font-family: 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    line-height: 1.15em;
 }
 
 p.author {
@@ -40,5 +41,11 @@ p.author {
 
     p.author {
         font-size: 1.4em;
+    }
+
+    p:not(.author) {
+        font-family: 'Ubuntu Mono', monospace;
+        font-size: 1.2em;
+        line-height: 1.15em;
     }
 }
