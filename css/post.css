@@ -75,12 +75,16 @@ main img {
     line-height: 1.45em;
 }
 
+footer {
+    margin-top: 100px;
+}
+
 @media (min-width: 768px) {
     main {
         padding: 3em max(1em, calc(50% - 600px)) 0;
     }
 
-    h1 {
+    h1:first-child {
         font-size: 2.8em;
     }
 
