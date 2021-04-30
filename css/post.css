@@ -36,6 +36,10 @@ a {
     color: #00ffff;
 }
 
+header a {
+    color: white;
+}
+
 b {
     font-weight: bold;
 }
