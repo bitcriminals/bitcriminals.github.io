@@ -1,6 +1,6 @@
 @import "code.css";
 
-main *:not(h1:first-child, p.author) {
+main *:not(h1:first-child, p.author, figure, pre) {
     margin: revert;
     padding: revert;
 }
