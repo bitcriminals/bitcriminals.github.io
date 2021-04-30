@@ -54,6 +54,7 @@
 }
 
 .wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 1.2em 1em;
@@ -509,6 +510,6 @@
   }
 
   .anchor-link {
-      position: relative;
+      position: absolute;
       top: -50px;
   }

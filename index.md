@@ -33,8 +33,8 @@ layout: blank
             </div>
         </div>
         <div class="divider"></div>
-        <div class="anchor-link" id="about"></div>
         <div class="wrapper">
+            <div class="anchor-link" id="about"></div>
             <div class="wrapper-image">
                 <div id="about-us-image">
                     Plan #34
@@ -53,8 +53,8 @@ layout: blank
                 </div>
             </div>
         </div>
-        <div class="anchor-link" id="reports"></div>
         <div class="wrapper">
+            <div class="anchor-link" id="reports"></div>
             <div class="wrapper-content">
                 <div class="wrapper-content--title">
                     Our Crime Reports
@@ -74,8 +74,8 @@ layout: blank
                 </div>
             </div>
         </div>
-        <div class="anchor-link" id="members"></div>
         <div class="wrapper">
+            <div class="anchor-link" id="members"></div>
             <div class="wrapper-content">
                 <div class="wrapper-content--title">
                     Our Criminals
