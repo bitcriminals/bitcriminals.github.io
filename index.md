@@ -18,7 +18,7 @@ layout: blank
     <div class="loader"></div>
     {% include header.html %}
     <main>
-        <div class="wrapper landing" id="landing">
+        <div class="wrapper landing">
             <div class="landing-main">
                 <div class="landing-main--content">
                     <div class="landing-main--content--title"></div>
@@ -33,6 +33,7 @@ layout: blank
             </div>
         </div>
         <div class="divider"></div>
+        <div class="anchor-link" id="about"></div>
         <div class="wrapper">
             <div class="wrapper-image">
                 <div id="about-us-image">
@@ -52,6 +53,7 @@ layout: blank
                 </div>
             </div>
         </div>
+        <div class="anchor-link" id="reports"></div>
         <div class="wrapper">
             <div class="wrapper-content">
                 <div class="wrapper-content--title">
@@ -72,6 +74,7 @@ layout: blank
                 </div>
             </div>
         </div>
+        <div class="anchor-link" id="members"></div>
         <div class="wrapper">
             <div class="wrapper-content">
                 <div class="wrapper-content--title">

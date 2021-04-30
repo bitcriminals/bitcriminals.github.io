@@ -507,3 +507,8 @@
   .loaded .loader {
       top: 100vh;
   }
+
+  .anchor-link {
+      position: relative;
+      top: -50px;
+  }
