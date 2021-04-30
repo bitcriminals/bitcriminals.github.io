@@ -16,6 +16,7 @@
     <main>
         <h1>{{page.title}}</h1>
         <p class="author">{{page.author}}</p>
+        <time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
         {{content}}
     </main>
     {% include footer.html %}

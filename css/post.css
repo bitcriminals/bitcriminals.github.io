@@ -41,6 +41,10 @@ b {
 
 p.author {
     font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+timedate {
     margin-bottom: 1em;
 }
 
