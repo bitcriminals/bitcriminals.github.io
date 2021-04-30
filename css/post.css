@@ -55,6 +55,17 @@ main img {
     max-width: 100%;
 }
 
+figure.highlight {
+    padding: 1em;
+    margin: 40px 0;
+    background-color: #161713;
+}
+
+figure.highlight pre {
+    background-color: transparent;
+    margin: 0;
+}
+
 @media (min-width: 768px) {
     main {
         padding: 3em max(1em, calc(50% - 600px)) 0;
