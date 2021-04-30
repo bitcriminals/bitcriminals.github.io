@@ -27,6 +27,18 @@ main *:not(h1, h2, h3, h4, h5, h6, p.author) {
     color: #dadada;
 }
 
+main *:not(h1, h2, h3, h4, h5, h6, p.author, a) {
+    color: #dadada;
+}
+
+a {
+    color: #00ffff;
+}
+
+b {
+    font-weight: bold;
+}
+
 p.author {
     font-size: 1.2em;
     margin-bottom: 1em;
@@ -35,7 +47,6 @@ p.author {
 main > img {
     display: block;
     max-width: 100%;
-    margin: auto;
 }
 
 @media (min-width: 768px) {
