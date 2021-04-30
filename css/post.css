@@ -1,8 +1,6 @@
-*:not(main *), h1:first-child, p.author {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Another Typewriter';
+main *:not(h1:first-child, p.author) {
+    margin: revert;
+    padding: revert;
 }
 
 * {
@@ -24,7 +22,7 @@ main {
 
 main *:not(h1, h2, h3, h4, h5, h6, p.author) {
     font-family: 'Ubuntu Mono', monospace;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.15em;
     color: #dadada;
 }
@@ -34,7 +32,7 @@ p.author {
     margin-bottom: 1em;
 }
 
-img {
+main > img {
     display: block;
     max-width: 100%;
     margin: auto;
@@ -55,7 +53,7 @@ img {
 
     main *:not(h1, h2, h3, h4, h5, h6, p.author) {
         font-family: 'Ubuntu Mono', monospace;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         line-height: 1.15em;
     }
 }

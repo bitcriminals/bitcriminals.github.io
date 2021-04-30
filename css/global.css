@@ -3,6 +3,13 @@
     src: url('/assets/atwriter.ttf');
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Another Typewriter';
+}
+
 body {
     background-color: black;
     color: white;
