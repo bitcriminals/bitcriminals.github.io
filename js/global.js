@@ -23,6 +23,8 @@ document.querySelector('.header--right.menu-icon').addEventListener('click', fun
     document.querySelector('.header--right.menu').classList.toggle('active');
 });
 
-document.querySelector('.header--right.menu a').addEventListener('click', function() {
-    document.querySelector('.header--right.menu').classList.toggle('active');
+document.querySelectorAll('.header--right.menu a').forEach( element => {
+    element.addEventListener('click', function() {
+        document.querySelector('.header--right.menu').classList.toggle('active');
+    })
 });
