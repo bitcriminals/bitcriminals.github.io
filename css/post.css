@@ -1,6 +1,6 @@
 @import "code.css";
 
-main *:not(h1:first-child, p.author, figure, pre) {
+main *:not(h1:first-child, p.author, .highlight, pre) {
     margin: revert;
     padding: revert;
 }
@@ -55,13 +55,13 @@ main img {
     max-width: 100%;
 }
 
-figure.highlight {
+.highlight {
     padding: 1em;
     margin: 40px 0;
     background-color: #161713;
 }
 
-figure.highlight pre {
+.highlight pre {
     background-color: transparent;
     margin: 0;
 }
