@@ -85,7 +85,7 @@ main img {
         font-size: 1.4em;
     }
 
-    main *:not(h1, h2, h3, h4, h5, h6, p.author, time, .hightlight *) {
+    main *:not(h1, h2, h3, h4, h5, h6, p.author, time, .highlight *) {
         font-family: 'Ubuntu Mono', monospace;
         font-size: 1.2rem;
         line-height: 1.15em;
