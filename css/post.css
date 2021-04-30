@@ -27,7 +27,7 @@ main *:not(h1, h2, h3, h4, h5, h6, p.author) {
     color: #dadada;
 }
 
-main *:not(h1, h2, h3, h4, h5, h6, p.author, a) {
+main *:not(h1, h2, h3, h4, h5, h6, a) {
     color: #dadada;
 }
 
