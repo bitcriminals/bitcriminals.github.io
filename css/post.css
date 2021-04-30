@@ -20,7 +20,7 @@ main {
     padding: 1em 1.2em;
 }
 
-main *:not(h1, h2, h3, h4, h5, h6, p.author) {
+main *:not(h1, h2, h3, h4, h5, h6, p.author, time) {
     font-family: 'Ubuntu Mono', monospace;
     font-size: 1rem;
     line-height: 1.15em;
@@ -44,11 +44,11 @@ p.author {
     margin-bottom: 0;
 }
 
-timedate {
+time {
     margin-bottom: 1em;
 }
 
-main > img {
+main img {
     display: block;
     max-width: 100%;
 }
@@ -66,7 +66,7 @@ main > img {
         font-size: 1.4em;
     }
 
-    main *:not(h1, h2, h3, h4, h5, h6, p.author) {
+    main *:not(h1, h2, h3, h4, h5, h6, p.author, time) {
         font-family: 'Ubuntu Mono', monospace;
         font-size: 1.2rem;
         line-height: 1.15em;
