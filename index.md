@@ -191,12 +191,12 @@ layout: blank
                             <div class="grid-content">_Mars</div>
                         </div>
                         <div class="grid-cell">
-                            <div class="grid-image"><img src="images/dummy-dp.jpg" alt="">
+                            <div class="grid-image"><img src="images/v1per.png" alt="">
                                 <div class="grid-image-overlay">
                                     <div class="overlay-text">
                                         <ul class="social-media-links">
-                                            <li><a href="https://github.com/MariaRose3" target="_blank"><img src="images/github.png" alt=""></a></li>
-                                            <li><a href="https://www.linkedin.com/in/maria-rose-paliyam-446675204/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
+                                            <li><a href="https://github.com/himanshudas75" target="_blank"><img src="images/github.png" alt=""></a></li>
+                                            <li><a href="https://www.linkedin.com/in/himanshu-das-448517200/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -208,8 +208,8 @@ layout: blank
                                 <div class="grid-image-overlay">
                                     <div class="overlay-text">
                                         <ul class="social-media-links">
-                                            <li><a href="https://github.com/MariaRose3" target="_blank"><img src="images/github.png" alt=""></a></li>
-                                            <li><a href="https://www.linkedin.com/in/maria-rose-paliyam-446675204/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
+                                            <li><a href="https://github.com/jhaprashant079" target="_blank"><img src="images/github.png" alt=""></a></li>
+                                            <li><a href="https://www.linkedin.com/in/prashant-kumar-jha-747504205/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
                                         </ul>
                                     </div>
                                 </div>
