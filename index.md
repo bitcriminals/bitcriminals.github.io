@@ -126,7 +126,7 @@ layout: blank
                             <div class="grid-content">panda1729</div>
                         </div>
                         <div class="grid-cell">
-                            <div class="grid-image"><img src="images/dummy-dp.jpg" alt="">
+                            <div class="grid-image"><img src="images/ayelmao.jpg" alt="">
                                 <div class="grid-image-overlay">
                                     <div class="overlay-text">
                                         <ul class="social-media-links">
