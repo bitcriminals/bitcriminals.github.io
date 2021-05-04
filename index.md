@@ -242,6 +242,19 @@ layout: blank
                             </div>
                             <div class="grid-content">Dark Demian</div>
                         </div>
+                        <div class="grid-cell">
+                            <div class="grid-image"><img src="images/cicada.jpg" alt="">
+                                <div class="grid-image-overlay">
+                                    <div class="overlay-text">
+                                        <ul class="social-media-links">
+                                            <li><a href="https://github.com/arjun118/" target="_blank"><img src="images/github.png" alt=""></a></li>
+                                            <li><a href="https://www.linkedin.com/in/vtr-ch-a2aa07204" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-content">$lim_$h4d¥</div>
+                        </div>
                     </div>
                 </div>
             </div>
