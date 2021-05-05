@@ -25,10 +25,10 @@ Connecting using the above command asks us to say the string which satisfies the
 
 This seems like we have to bruteforce strings from a dictionary and run the comparison. Here is my code for that:
 
-![down](images/MaskdMafia/glimpse1.png)
+![](images/MaskdMafia/glimpse1.png)
 
 After running the comparison and sending the corresponding string prints out a 6 encrypted messages. Mine was:
-![down](images/MaskdMafia/glimpse2.png)
+![](images/MaskdMafia/glimpse2.png)
 
 Googling up write-ups and previous ctf challenges about same key encryption gives results about RSA, OTP and some more. Reading some OTP write-ups I get to know about the crib-drag attack or the known plaintext attack .Wait ,isn’t the beginning of our message known?
 
@@ -42,7 +42,7 @@ Well frankly, I searched a lot more in order to get a hang of what it really is,
 Using this tool on the strings in pairs gave me my flag.
 However, later I also made a script for solving the problem (pardon the clumsiness of the script) :
 
-![down](images/MaskdMafia/glimpse3.png)
+![](images/MaskdMafia/glimpse3.png)
 
 Oh! And here's the flag : ***masrt{think_out_of_the_box_yeager}***
 
