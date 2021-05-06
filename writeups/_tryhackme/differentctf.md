@@ -116,10 +116,11 @@ We found our first flag!!!
 ![](/images/flag1.png)
 
 ### www-data -> hakanbey :: Sucrack
-after running linpeas.sh, linenum.sh and even then not finding any way to escalate from www-data to the local user or root... *ctf-like* thinking helped!
+after running linpeas.sh, linenum.sh and even then, not finding any way to escalate from www-data to the local user or root...  *ctf-like* thinking helped!
 
 The room had a tag called sucrack (why something this random) (also never heard of it yet)
 Looking it up,
+
 `sucrack is a multithreaded Linux/UNIX tool for brute-force cracking local user accounts via su. This tool comes in handy as final instance on a system where you have not too many privileges`
 
 So yea... need to use it to crack the user password!!!
@@ -146,10 +147,10 @@ done < $input
 ```
 and uploaded the **superlist.txt** to the server
 
-Compiling sucrack was the issue, many gave the error `Exec Format Error`. Finally I found `sucrack_1.2.3-5+b1_amd64.deb` this deb file from [source](http://http.kali.org/pool/main/s/sucrack/) which worked.
+Compiling sucrack was the issue, many gave the error ```Exec Format Error```. Finally I found `sucrack_1.2.3-5+b1_amd64.deb` this deb file from [source](http://http.kali.org/pool/main/s/sucrack/) which worked.
 
 ```bash
-$cd /tmp
+$ cd /tmp
 $ dpkg -x sucrack_1.2.3-5+b1_amd64.deb sucrack
 $ sucrack/usr/bin/sucrack -w 100 -b 500 -u hakanbey superlist.txt   
 ```
