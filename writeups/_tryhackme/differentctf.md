@@ -82,14 +82,14 @@ Now, I tried refreshing the site:
 
 ![](/images/subdomainthm.png)
 
-Hurray! It worked! Now, let's browse the site a little. I did not find anything of importance on it, BUT note that if i opened the site **http://subdomain.adana.thm/index.php**, we find a webpage. Remember that index.png was also present in the ftp server, so maybe we can use this page to execute our payload.
+Hurray! It worked! Now, let's browse the site a little. I did not find anything of importance on it, BUT note that if i opened the site **http://subdomain.adana.thm/index.php**, we find a webpage. Remember that index.png was also present in the ftp server, so maybe we can use this page to execute our payload.  
 (Note that opening the page: http://<boxip>/index.php it opens too but I tried running the payload from this site and it doesn't work)
   
-Now, let's upload our payload. I used the reverse shell payload from [here](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php).
-(Note: Before uploading the shell, make sure to change the IP and the port to listen to in the shell to your tun0 IP and any empty port respectively.)
-It's time to upload!
-Login to the FTP server (make sure you were in the directory where your shell is before logging in). Now run:
-```put <filename>```
+Now, let's upload our payload. I used the reverse shell payload from [here](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php).  
+(Note: Before uploading the shell, make sure to change the IP and the port to listen to in the shell to your tun0 IP and any empty port respectively.)  
+It's time to upload!  
+Login to the FTP server (make sure you were in the directory where your shell is before logging in).  
+Now run: ```put <filename>```  
 This should upload the file to the FTP server.
 
 ![](/images/reverseshellput.png)
