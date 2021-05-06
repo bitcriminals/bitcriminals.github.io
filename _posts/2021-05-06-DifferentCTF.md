@@ -40,4 +40,7 @@ Opening the /aanouncements page,
 
 
 We get a jpg image and a wordlist which is quite interesting.
+Now,we open the /phpmyadmin directory to find a login page.
+
+![](/images/phpmyass.png)
 
