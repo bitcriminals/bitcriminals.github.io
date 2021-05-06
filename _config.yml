@@ -64,3 +64,6 @@ collections:
   glimpseofism:
     title: "Glimpse of ISM"
     output: true
+  tryhackme:
+    title: "TryHackMe"
+    output: true
