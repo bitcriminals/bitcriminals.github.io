@@ -10,11 +10,13 @@ prompt: https://tryhackme.com/room/adana
 
 First,Start your machine from the TryHackMe website.Connect via OpenVPN and then, ping the ip to check whether it is running or not. 
 
-### TASK 1
+## TASK 1
 
 Here,we first perform a basic Nmap scan.
 
-```nmap -sV -sC -A <ip> ```
+```shell
+nmap -sV -sC -A <ip> 
+```
 
 ![](/images/nmap.png)
 
@@ -28,7 +30,9 @@ We also get: http-server-header: Apache/2.4.29 (Ubuntu)
 
 After the Nmap scan or along with it we can search for hidden directories with **gobuster**
 
-```gobuster dir -u <ip> -w="/usr/share/wordlists/dirb/common.txt"```
+```shell
+gobuster dir -u <ip> -w="/usr/share/wordlists/dirb/common.txt0"
+```
 
 I have used the common.txt wordlist you can use your own choice.Finally,after one eternity
 
@@ -89,21 +93,108 @@ Now, let's upload our payload. I used the reverse shell payload from [here](http
 (Note: Before uploading the shell, make sure to change the IP and the port to listen to in the shell to your tun0 IP and any empty port respectively.)  
 It's time to upload!  
 Login to the FTP server (make sure you were in the directory where your shell is before logging in).  
-Now run: ```put <filename>```  
+Now run: 
+```shell
+put <filename>
+```  
 This should upload the file to the FTP server.
 
 ![](/images/reverseshellput.png)
 
 Note that here we do not have permission to execute the file. Let's try changing that with:
-```chmod 777 <filename>```
+```shell
+chmod 777 <filename>
+```
 
 ![](/images/chmod.png)
 
 We can see that we now have permission to execute the file. Now it's time to execute it!
 Let's set up a netcat listener on the port we just specified in our reverse shell payload using:
-```nc -lnvp <port>```
+```shell
+nc -lnvp <port> 
+```
 
 Now let's go the site:  **http://subdomain.adana.thm/<filename>**
 And we can see on our terminal (where we had set up the netcat listener) we have got our shell!
 
 ![](/images/gotshell.png)
+
+
+<br>
+
+## Reversing The Binary
+
+Using the file command, I found that /usr/bin/binary was an executable file. So let's run it:
+
+![Testing /usr/bin/binary](/images/ReversedEyes/DifferentCTF_binaryAttempt1.png)
+
+First thing that pops up in my head seeing this is reversing it using Ghidra (big mistake!). Since I had access to the website directory from the website, I copied the binary file to the website directory, gave it permissions and:
+
+```shell
+cp /usr/bin/binary ~/website/binary
+chmod 777 ~/website/binary
+```
+
+then visited [http://subdomain.adana.thm/binary](http://subdomain.adana.thm/binary) to download the file in my local machine.
+
+I started up Ghidra, imported, opened and analyzed the file with the default settings.
+
+Then under the "Functions" dropdown in the "Symbol Tree" box on the left, select the "main" function, which is where the user code starts. On the right side, Ghidra shows the decompiled code. The code is 103 lines long, but all of it is not important. I ran the binary in the reverse shell earlier and got a basic idea of what it was doing. It asks the user for a string and if the string is as expected by the program, it does something. Probably which is what we want it to do.
+
+So let's start looking at the code. If we see in line 48:
+```c
+__isoc99_scanf(&DAT_00100edd,local_138);
+```
+We see it has a "scanf" function which is what used to take input in C programs. So our input is being stored in the variable "local_138". If we look at the code around it:
+
+![Ghidra screenshot for main function line 32-49](/images/ReversedEyes/DifferentCTF_GhidraScreenshot.png)
+
+We find that the "local_138" variable is being compared with "local_1e8". And the result of the comparison is the deciding factor in further code execution. So we probably have to input a string which is equal to the value in "local_1e8".
+
+Now the value of "local_1e8" at line 49 is a result of operations in lines 33-46. So we need to reverse these lines.
+
+```c
+local_1e8 = 0x726177;
+```
+
+Starting from line 33, local_1e8 is assigned 0x726177. After that some variables are being some values, and in lines 43-46:
+
+```c
+strcat((char *)&local_1e8,(char *)&local_1d8);
+strcat((char *)&local_1e8,(char *)&local_1c8);
+strcat((char *)&local_1e8,(char *)&local_1b8);
+strcat((char *)&local_1e8,(char *)&local_1a8);
+```
+there are some concatenation operations which concat the value of local_1e8 with the values of local_1d8, local_1c8, local_1b8 and local_1a8. These variables are the ones who have been assigned some hex values in the previous lines. Note: the values are first being converted to strings, which means the hex values stored in these variables serve as the ASCII value for the characters of the string.
+
+So we do the same operations in our machine. I used [Cyberchef](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')&input=NzI2MTc3NjU2ZTZmN2E2ZTY5NjE2NDYxNjE2ZQ) for this. The output came as:
+
+```
+rawenozniadaan
+```
+
+Went to the reverse shell, executed the binary and input this string. But:
+
+![Failed attempt at /usr/bin/binary](/images/ReversedEyes/DifferentCTF_binaryAttempt2.png)
+
+Something went wrong ? It's a simple program so probably the logic wouldn't be incorrect. But one thing could have been missed: [Endianness](https://en.wikipedia.org/wiki/Endianness). The architecture of this binary follows little-endian so the letters should be reversed in order to get the correct answer. 
+
+Since the string is small, I did this reversing manually:
+2 hex digits form 1 character. The first hex number, "0x726177" corresponds to 6 digits which means 3 characters. So the first 3 characters, "raw" get reversed to "war". Then next "0x656e6f7a" corresponds to 4 characters, "enoz" and gets reversed to "zone". And so on.
+
+The final string is:
+```
+warzoneinadana
+```
+
+And moment of truth:
+
+![Success attempt at /usr/bin/binary](/images/ReversedEyes/DifferentCTF_binaryAttempt3.png)
+
+it works!
+
+Later, I realized that instead of doing all this, I could have simply used "ltrace" to trace library calls, and thus trace the call to strcmp(). With this, I could have directly got the parameters to strcmp function call:
+
+![Regret](/images/ReversedEyes/DifferentCTF_binaryRegret.png)
+
+and thus get the string!

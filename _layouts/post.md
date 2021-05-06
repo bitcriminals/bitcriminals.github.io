@@ -37,7 +37,7 @@
             <b>Prompt: </b>
             {{page.prompt | newline_to_br }}
         </p>
-        <h2 id="solution_start">Solution</h2>
+        <h1 id="solution_start">Solution</h1>
         {{content}}
     </main>
     {% include footer.html %}
