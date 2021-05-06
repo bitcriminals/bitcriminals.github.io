@@ -64,3 +64,20 @@ Checked the different tables and found this interesting table "wp-options" in ph
 
 ![](/images/MaskdMafia/thm-differentCTF5.png)
 
+Now, I think we need to find a way to get a shell on the server. I remembered that there is an FTP server going on, logging into that with the credentials we found above.
+After it logins, let's run the **ls** command and see what files are present on the server:
+
+![](/images/FTPserver.png)
+
+Seems like this could be a place from where we can upload our payload, but from where will we run it? Let's try visiting the domain we found out from the phpmyadmin site:
+
+![](/images/ServerNotFound.png)
+
+Hmmmm.....something is wrong. 
+I added the IP of the box and the domain of the website to my **/etc/hosts** file:
+
+![](/images/etchosts.png)
+
+Now, I tried refreshing the site:
+
+![](/images/subdomainthm.png)
