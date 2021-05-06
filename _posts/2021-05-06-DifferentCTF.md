@@ -1,5 +1,5 @@
 ---
-title: DifferentCTF.md(TryHackMe)
+title: DifferentCTF(TryHackMe)
 layout: post
 author: BIT Criminals Team
 ---
