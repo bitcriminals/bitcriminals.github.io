@@ -1,9 +1,5 @@
 let currentTerminal, directoryStructure = {};
 
-console.log("%cHello", "font-size: 40px");
-console.log("%cLooks like you are on the right track", "font-size: 20px");
-console.log("%cHere's your way forward.\nRun sayhello", "font-size: 14px");
-
 function sayhello() {
     console.log("Hello. But you said it in the wrong place. https://www.latlmes.com/tech/debug-js-1");
     openTerminal();
