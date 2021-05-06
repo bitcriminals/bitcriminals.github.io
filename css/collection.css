@@ -1,0 +1,80 @@
+@import "code.css";
+
+* {
+    font-weight: normal;
+}
+
+:root {
+    font-size: 1.1em;
+}
+
+header {
+    position: sticky;
+    transform: translateY(0);
+}
+
+main {
+    padding: 1em 1.2em;
+}
+
+main img {
+    display: block;
+    max-width: 100%;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.6em;
+}
+
+.grid-cell {
+    width: 46%;
+    margin-bottom: 1em;
+}
+
+.grid-image {
+    width: 100%;
+    /* padding-top: 100%; */
+    background-color: white;
+    margin-bottom: .8em;
+    position: relative;
+    
+}
+
+.grid-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.grid-content {
+    font-size: 1em;
+}
+
+
+@media (min-width: 768px) {
+    main {
+        padding: 3em max(1em, calc(50% - 600px)) 0;
+    }
+
+    .grid {
+        justify-content: flex-start;
+    }
+
+    .grid-cell {
+        width: 25%;
+        text-align: center;
+        padding: 1em;
+        font-size: 1.6em;
+        text-decoration: none;
+    }
+}

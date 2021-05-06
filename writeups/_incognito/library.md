@@ -1,16 +1,12 @@
 ---
-title: IncognitoCTF Challenge 
+title: Library
 layout: post
 author: Dark Demian
+date: 2021-05-05 15:54:00 +0530
+type: Pen Testing
+difficulty: Easy
+prompt: https://tryhackme.com/room/bsidesgtlibrary
 ---
-
-# Library
-
-### Easy
-
-### Points: 200
-
-## Solution
 
 Firstly download the vpn configuration file from the tryhackme website and then
 connect to it using openvpn.

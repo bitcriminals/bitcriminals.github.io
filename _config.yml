@@ -56,3 +56,11 @@ plugins:
 
 markdown: kramdown
 highlighter: rouge
+collections_dir: writeups
+collections:
+  incognito:
+    title: "Incognito"
+    output: true
+  glimpseofism:
+    title: "Glimpse of ISM"
+    output: true

@@ -1,25 +1,24 @@
 ---
-title: Glimpse Of ISM
+title: Masrt
 layout: post
 author: MaskdMafia
+date: 2021-05-05 15:54:00 +0530
+type: Crypto
+difficulty: Medium
+prompt: >
+    Masrt was in a hurry, he wanted to get the challenges for Glimpse done asap before his vacation. Thinking Naughtyb0y wouldn't notice, he decided to encrypt several messages with the same key.
+
+    
+    But alas, he lost the original message during his vacation and only remembers that it started with "did". Can you save Masrt and his innocence?
+
+
+    Being over-cautious, he also installed a pow system so that only select few get the encrypted messages.
+
+
+    connect @ nc ctf.glimpse-of-ism.ml 6001
+
+    use fr0st_is_my_arch_nemesis as access password
 ---
-
-# Masrt
-
-## Crypto
-
-### Points: 1000
-
-Prompt: Masrt was in a hurry, he wanted to get the challenges for Glimpse done asap before his vacation. Thinking Naughtyb0y wouldn't notice, he decided to encrypt several messages with the same key.
-
-But alas, he lost the original message during his vacation and only remembers that it started with "did". Can you save Masrt and his innocence?
-
-Being over-cautious, he also installed a pow system so that only select few get the encrypted messages.
-
-connect @ nc ctf.glimpse-of-ism.ml 6001
-use fr0st_is_my_arch_nemesis as access password
-
-## Solution
 
 Connecting using the above command asks us to say the string which satisfies the condition: sha256(string)[-6:] --> xxxxxx
 

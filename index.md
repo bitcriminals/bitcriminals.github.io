@@ -61,11 +61,13 @@ layout: blank
                 </div>
                 <div class="wrapper-content--content center-align">
                     <div class="writeup-grid main-carousel">
-                        {% for post in site.posts %}
-                            <a href="{{ post.url }}" class="writeup-grid-cell carousel-cell">
-                                <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
-                                <div class="writeup-grid-content">{{ post.title }}</div>
-                            </a>
+                        {% for ctf in site.collections %}
+                            {% if ctf.label != "posts" %}
+                                <a href="/{{ ctf.label }}" class="writeup-grid-cell carousel-cell">
+                                    <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
+                                    <div class="writeup-grid-content">{{ ctf.title }}</div>
+                                </a>
+                            {% endif %}
                         {% endfor %}
                     </div>
                     <!-- <a href="">

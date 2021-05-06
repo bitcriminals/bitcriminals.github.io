@@ -1,16 +1,12 @@
 ---
-title: Ruby (Glimpse Of ISM)
+title: Ruby
 layout: post
 author: panda1729
+date: 2021-05-06 15:54:00 +0530
+type: Crypto
+difficulty: Medium
+prompt: Not given
 ---
-
-# Ruby
-
-### Crypto
-
-### Points: 300
-
-## Solution
 
 The prompt is too straight forward. It’s just the description of a problem, nothing hidden between the lines and no tricks used here – just pure mathematics.
 

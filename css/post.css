@@ -46,11 +46,12 @@ b {
 
 p.author {
     font-size: 1.2em;
-    margin-bottom: 0;
+    margin-bottom: 1.6em;
 }
 
 time {
-    margin-bottom: 1em;
+    font-size: 1.2em;
+    margin-bottom: 0;
 }
 
 main img {
@@ -79,6 +80,10 @@ footer {
     margin-top: 100px;
 }
 
+#solution_start {
+    margin-top: 2em;
+}
+
 @media (min-width: 768px) {
     main {
         padding: 3em max(1em, calc(50% - 600px)) 0;
@@ -88,8 +93,10 @@ footer {
         font-size: 2.8em;
     }
 
-    p.author {
-        font-size: 1.4em;
+    p.author, time {
+        font-size: 1.2em;
+        line-height: 1.4em;
+
     }
 
     main *:not(h1, h2, h3, h4, h5, h6, p.author, time, .highlight *) {
