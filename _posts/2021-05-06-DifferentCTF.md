@@ -34,6 +34,8 @@ I have used the common.txt wordlist you can use your own choice.Finally,after on
 
 we get a lot of directories and checking them the **/announcemnet** and the **/phpmyadmin** appeared juicy to me.
 
+Opening the /aanouncement page,
+
 ![](/images/announ.png)
 
 
