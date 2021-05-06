@@ -1,5 +1,5 @@
 ---
-title: DifferentCTF(TryHackMe)
+title: DifferentCTF (TryHackMe)
 layout: post
 author: BIT Criminals Team
 ---
@@ -43,4 +43,22 @@ We get a jpg image and a wordlist which is quite interesting.
 Now,we open the /phpmyadmin directory to find a login page.
 
 ![](/images/phpmyass.png)
+
+Notice that in the /announcements/ page we got a picture and a wordlist.
+Searching for steganographically hidden information using Stegseek on the given picture with the custom wordlist gives us a base64 string which , after decoding , gives us the username and password for ftp login .
+
+![](/images/MaskdMafia/thm-differentCTF2.png)
+
+So I logged in with the credentials and found the username and password of /phpmyadmin/ in the wp-config.php file
+
+![](/images/MaskdMafia/thm-differentCTF3.png)
+
+Logging in with the database credentials in /phpmyadmin shows us this page :
+
+![](/images/MaskdMafia/thm-differentCTF4.png)
+
+Checked the different tables and found this interesting table "wp-options" in phpmyadmin1 which led us to a domain : 
+***http://subdomain.adana.thm***
+
+![](/images/MaskdMafia/thm-differentCTF5.png)
 
