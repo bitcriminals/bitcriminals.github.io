@@ -32,9 +32,9 @@ I have used the common.txt wordlist you can use your own choice.Finally,after on
 
 ![](/images/gobust.png)
 
-we get a lot of directories and checking them the **/announcemnet** and the **/phpmyadmin** appeared juicy to me.
+we get a lot of directories and checking them the **/announcemnets** and the **/phpmyadmin** appeared juicy to me.
 
-Opening the /aanouncement page,
+Opening the /aanouncements page,
 
 ![](/images/announ.png)
 
