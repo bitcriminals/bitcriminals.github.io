@@ -18,6 +18,7 @@ Here,we first perform a basic Nmap scan.
 
 Clearly,we get 2 open ports.
 1.21-ftp 
+
 2.80-ssl/http
 
 We also get: http-server-header: Apache/2.4.29 (Ubuntu)
