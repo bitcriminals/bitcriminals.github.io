@@ -61,9 +61,12 @@ collections:
   incognito:
     title: "Incognito"
     output: true
+    image: "/images/ctfs/incognito.png"
   glimpseofism:
     title: "Glimpse of ISM"
     output: true
+    image: "/images/dummy-dp.jpg"
   tryhackme:
     title: "TryHackMe"
     output: true
+    image: "/images/ctfs/tryhackme.jpg"

@@ -64,7 +64,7 @@ layout: blank
                         {% for ctf in site.collections %}
                             {% if ctf.label != "posts" %}
                                 <a href="/{{ ctf.label }}" class="writeup-grid-cell carousel-cell">
-                                    <div class="writeup-grid-image"><img src="images/dummy-dp.jpg" alt=""></div>
+                                    <div class="writeup-grid-image"><img src="{{ ctf.image }}" alt=""></div>
                                     <div class="writeup-grid-content">{{ ctf.title }}</div>
                                 </a>
                             {% endif %}
