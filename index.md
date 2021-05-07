@@ -185,7 +185,7 @@ layout: blank
                                     <div class="overlay-text">
                                         <ul class="social-media-links">
                                             <li><a href="https://github.com/MariaRose3" target="_blank"><img src="images/github.png" alt=""></a></li>
-                                            <li><a href="https://www.linkedin.com/in/maria-rose-paliyam-446675204/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
+                                            <li><a href="https://www.linkedin.com/in/maria-rose-446675204/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
                                         </ul>
                                     </div>
                                 </div>
