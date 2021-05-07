@@ -276,6 +276,8 @@ I used cyberchef and thus got the root password!
 ![cyberchef](https://user-images.githubusercontent.com/78094309/117414183-79b50a00-af34-11eb-8d31-bf65f95fe41c.png)
 
 Now, Simply obtain the root flag!
+
+
 ![root_flag](https://user-images.githubusercontent.com/78094309/117414423-bda80f00-af34-11eb-9c2a-66e4011430c3.png)
 
 
