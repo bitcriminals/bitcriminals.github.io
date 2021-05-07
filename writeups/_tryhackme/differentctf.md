@@ -249,3 +249,39 @@ Later, I realized that instead of doing all this, I could have simply used "ltra
 ![Regret](/images/ReversedEyes/DifferentCTF_binaryRegret.png)
 
 and thus get the string!
+
+Now,I got a file root.jpg on execution of 'binary' file.
+As the shell doesn't support much of the tools like hexeditor(i checked for ghex,hexedit),exif command ,etc, I need to transfer the file into my own machine.
+So for this, i opened a server on the shell by following command:
+
+```shell
+python3 -m http.server
+```
+![serverrr](https://user-images.githubusercontent.com/78094309/117415553-12985500-af36-11eb-85fa-3651ed6b8e11.png)
+
+
+and used 'wget" command to ge the file
+
+![server_getttint root](https://user-images.githubusercontent.com/78094309/117413716-eaa7f200-af33-11eb-9b3d-468eedfc6dea.png)
+
+
+Now,comes the stage of analysing the file
+
+I used hexeditor and luckily i founded the root password,  thus no need for the privilege escalation!
+
+![hexedi](https://user-images.githubusercontent.com/78094309/117414132-6b66ee00-af34-11eb-94be-ebe1d660f59d.png)
+
+
+I used cyberchef and thus got the root password!
+![cyberchef](https://user-images.githubusercontent.com/78094309/117414183-79b50a00-af34-11eb-8d31-bf65f95fe41c.png)
+
+Now, Simply obtain the root flag!
+
+
+![root_flag](https://user-images.githubusercontent.com/78094309/117414423-bda80f00-af34-11eb-9c2a-66e4011430c3.png)
+
+
+
+
+
+
