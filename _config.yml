@@ -70,3 +70,7 @@ collections:
     title: "TryHackMe"
     output: true
     image: "/images/ctfs/tryhackme.jpg"
+  dawgctf21:
+    title: "Dawg CTF 2021"
+    output: true
+    image: "/images/ctfs/dawgctf21.png"
