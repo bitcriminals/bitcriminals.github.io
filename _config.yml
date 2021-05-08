@@ -65,7 +65,7 @@ collections:
   glimpseofism:
     title: "Glimpse of ISM"
     output: true
-    image: "/images/dummy-dp.jpg"
+    image: "/images/ctfs/iog.jpg"
   tryhackme:
     title: "TryHackMe"
     output: true
