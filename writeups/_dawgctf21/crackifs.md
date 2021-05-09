@@ -17,6 +17,7 @@ so i dumped using following command:
 python```
 ./dumpifs ../DawgCTF.ifs -d ../dump -x -b
  ```
+
 ![](/writeups/_dawgctf21/ifs1.png)
 
 On searching i found the shadow file in the dump and as from reading the prompt it is clear that the passwords are very weak...
