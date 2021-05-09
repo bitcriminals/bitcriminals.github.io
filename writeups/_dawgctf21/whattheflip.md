@@ -5,12 +5,7 @@ author: panda1729
 date: 2021-05-08 22:00:00 +0530
 type: Cryptography
 difficulty: Medium
-prompt: >
-	Hackers have locked you out of your account! Fortunately their netcat server has a vulnerability.
-
-	nc umbccd.io 3000
-
-	This netcat server is username and password protected. The admin login is known but forbidden. Any other login entered gives a cipher.
+prompt: No Prompt
 ---
 
 We are given a server and the prompt says it has a vulnerability. The given `app.py` file shows the internal working of server.
