@@ -10,7 +10,8 @@ prompt: No Prompt
 
 We are given a server and a script app.py.
 ## app.py
-```import socketserver
+```python
+import socketserver
 import socket, os
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
@@ -28,8 +29,6 @@ wlcm_msg ='#####################################################################
 
 key = get_random_bytes(16)
 iv = get_random_bytes(16)
-
-
 def encrypt_data(data):
 	padded = pad(data.encode(),16,style='pkcs7')
 	cipher = AES.new(key, AES.MODE_CBC,iv)
