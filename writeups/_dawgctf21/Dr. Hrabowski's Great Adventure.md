@@ -10,7 +10,7 @@ prompt: President Freeman Hrabowski is having a relaxing evening in Downtown Bal
 
 This challenge had the link "http://umbccd.io:6100" and a note which says "If you get an SSL error, try a different browser".
 I got this error so as instructed, used a different browser.
-You get this login page.
+I got this login page.
 
 ![](/images/_Mars/Dawg3.png)
 
