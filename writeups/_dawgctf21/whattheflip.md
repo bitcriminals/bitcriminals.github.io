@@ -5,13 +5,19 @@ author: panda1729
 date: 2021-05-08 22:00:00 +0530
 type: Cryptography
 difficulty: Medium
-prompt: No Prompt
+prompt: >
+
+	Hackers have locked you out of your account! Fortunately their netcat server has a vulnerability.
+
+	nc umbccd.io 3000
+
+	This netcat server is username and password protected. The admin login is known but forbidden. Any other login entered gives a cipher.
 ---
 
 We are given a server and the prompt says it has a vulnerability. The given `app.py` file shows the internal working of server.
 
 
-#### app.py
+`app.py`
 ```python
 import socketserver
 import socket, os
@@ -106,16 +112,13 @@ This complete setup is vulnerable to **Bit Flipping Attack**.
 ### Bit Flipping Attack
 
 In CBC Mode, the ciphertext of previous block is XORed with the decrypted ciphertext of current block to obtain the plaintext. So, if we change something in the ciphertext of previous block, it will be reflected in the obtained plaintext. Following two images will explain the encryption and decryption process.
-  
-</br>
+
 
 ![Encryption](encryption.png)
 
-</br>
 
 ![Decryption](decryption.png)
 
-</br>
 
 Consider the following image and note the symbols used to represent highlighted bytes.
 
@@ -146,7 +149,7 @@ For this particular case:
 
 Now we know that replacing first 2 digits of leaked ciphertext (`6e` with `66`) will change the `i` i.e. first character of 2nd plaintext block to `a` and this will have no effect on next blocks. Also, `logged_username=` has no role in validation as explained above.
 
-</br>
+
 
 ```
 $ nc umbccd.io 3000
