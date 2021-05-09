@@ -6,8 +6,9 @@ date: 2021-05-09 12:36:00 +0530
 type: Fwn (Forensics/Web/Network)
 difficulty: Easy
 prompt: The accounts in this QNX IFS have insecure passwords. Crack them to assemble the flag.
-
 ---
+
+# Solution
 
 we were provided an .ifs file which is a file system image of a Blackberry device so we need to dump the image i used this github tool to dump the files 
 [dumpifs](https://github.com/askac/dumpifs)
