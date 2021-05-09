@@ -12,7 +12,7 @@ This challenge, though given under the forensics category, is more of OSINT :-)
 
 Unzipping the 'WomenInTech.zip' creates a directory called 'images' which contains images of ten women.
 
-The prompt clearly mentions that it needs the secret of a particular woman who has autored 'understandable textbooks about network security protocols' and has 100+ patents to her credit. So all we need to do is to identify her, given the ten women.
+The prompt clearly mentions that it needs the secret of a particular woman who has autored ```understandable textbooks about network security protocols``` and has ```100+ patents``` to her credit. So all we need to do is to identify her, given the ten women.
 
 ![](/images/_Mars/Dawg1.png)
 
@@ -24,9 +24,9 @@ Then applied steghide on her image, but this needed a paraphrase, which I didn't
 ![](/images/_Mars/Dawg2.png)
 
 
-Then I found '''U3Bhbm5pbmdUcmVlVmlnCg==''', which seemed base64 encoded (bescause of the == at the end) and also '''VpwtPBS{r0m5 0W t4x3IB5}''' (looked like the encoded flag).
+Then I found ```U3Bhbm5pbmdUcmVlVmlnCg==```, which seemed base64 encoded (bescause of the == at the end) and also ```VpwtPBS{r0m5 0W t4x3IB5}``` (looked like the encoded flag).
 
-On decoding the base 64 string I got '''SpanningTreeVig'''. The next thought was that this might be a Vigenère cipher, with the decoded base64 string as the key, and so it was!
+On decoding the base 64 string I got ```SpanningTreeVig```. The next thought was that this might be a Vigenère cipher, with the decoded base64 string as the key, and so it was!
 On deciphering it I found the flag.
 
 Flag: ***DawgCTF{l0t5 0F p4t3NT5}***
