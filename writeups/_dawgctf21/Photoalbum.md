@@ -8,8 +8,6 @@ difficulty: Medium
 prompt: Your grandparents forgot the password to their online photo album! Lucky for you, they only ever use simple passwords and you’re a UMBC CS student. Make them proud.
 ---
 
-# Solution
-
 This challenge provided us with a really large zip file ( around 157 mbs ), and while unzipping it asks for the password. Using John the Ripper to crack the hash with rockyou.txt yields no results. 
 
 And then there's the weird prompt:

@@ -9,8 +9,6 @@ prompt: What would a drunken sailor do? (Wrap the output in DawgCTF{ })
 
 ---
 
-# Solution
-
 Unzipping the contents we find that we have been given a .iso file. So we extract the contents in a separate folder to find the following two extracted files :
 
 ![](/images/MaskdMafia/DawgCTF1.png)
