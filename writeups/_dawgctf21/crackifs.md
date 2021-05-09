@@ -9,8 +9,6 @@ prompt: The accounts in this QNX IFS have insecure passwords. Crack them to asse
 
 ---
 
-# SOLUTION
-
 we were provided an .ifs file which is a file system image of a Blackberry device so we need to dump the image i used this github tool to dump the files 
 [dumpifs](https://github.com/askac/dumpifs)
 so i dumped using following command:
