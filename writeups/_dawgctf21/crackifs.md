@@ -15,15 +15,16 @@ we were provided an .ifs file which is a file system image of a Blackberry devic
 [dumpifs](https://github.com/askac/dumpifs)
 so i dumped using following command:
 
-```python
-./dumpifs ../DawgCTF.ifs -d ../dump -x -b ```
-![](ifs1.png)
+python```
+./dumpifs ../DawgCTF.ifs -d ../dump -x -b
+ ```
+![](/writeups/_dawgctf21/ifs1.png)
 
 On searching i found the shadow file in the dump and as from reading the prompt it is clear that the passwords are very weak...
 So i used John the ripper to crack the hash but firstly we need to create our own wordlist.
 On enumerating i found that all the passwords are 4 character long so i wrote a script to make a wordlist:
 
-```python 
+python``` 
 import string
 s = string.printable
 print(s)
@@ -35,11 +36,12 @@ with open("wordlist.txt","w") as f:
                 for l in letters:
                     word=i+j+k+l
 
-                    f.write(word + '\n') ```
+                    f.write(word + '\n') 
+```
 
 Now i ran john 
 `john --rules shadow -w=wordlist.txt`
-![](ifs2.png)
+![](/writeups/_dawgctf21/ifs2.png)
 
 And hence we got our flag!! 
 `DawgCTF{un_scramble}`
