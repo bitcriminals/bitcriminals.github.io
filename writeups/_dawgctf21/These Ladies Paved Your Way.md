@@ -14,12 +14,14 @@ Unzipping the 'WomenInTech.zip' creates a directory called 'images' which contai
 
 The prompt clearly mentions that it needs the secret of a particular woman who has autored ```understandable textbooks about network security protocols``` and has ```100+ patents``` to her credit. So all we need to do is to identify her, given the ten women.
 
+
 ![](/images/_Mars/Dawg1.png)
 
 
 Tried googling, but didn't find much (maybe I didn't do it properly). So I took a reverse approach. I googled the name of the first woman of the ten. But the requirments didn't tally. Then I took a chance and googled the last woman, and she was the one, ```Radia Perlman```.
 
 Then applied steghide on her image, but this needed a paraphrase, which I didn't have. The next thought was to apply ```exiftool```.
+
 
 ![](/images/_Mars/Dawg2.png)
 
