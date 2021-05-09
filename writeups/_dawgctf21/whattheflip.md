@@ -6,7 +6,10 @@ date: 2021-05-08 22:00:00 +0530
 type: Cryptography
 difficulty: Medium
 prompt: >
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3ee1a111d68d7d71854881eed0997f39c7b1f2fc
 	Hackers have locked you out of your account! Fortunately their netcat server has a vulnerability.
 
 	nc umbccd.io 3000
