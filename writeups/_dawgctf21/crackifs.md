@@ -14,7 +14,7 @@ we were provided an .ifs file which is a file system image of a Blackberry devic
 [dumpifs](https://github.com/askac/dumpifs)
 so i dumped using following command:
 
-python```
+```py
 ./dumpifs ../DawgCTF.ifs -d ../dump -x -b
  ```
 
@@ -24,7 +24,7 @@ On searching i found the shadow file in the dump and as from reading the prompt 
 So i used John the ripper to crack the hash but firstly we need to create our own wordlist.
 On enumerating i found that all the passwords are 4 character long so i wrote a script to make a wordlist:
 
-python``` 
+```py 
 import string
 s = string.printable
 print(s)
