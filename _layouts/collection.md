@@ -22,7 +22,7 @@
             {% for writeup in writeups %}
                 <a href="{{ writeup.url }}" class="grid-cell">
                     <div class="grid-image">
-                        <img src="/images/dummy-dp.jpg" alt="">
+                        <img src="/images/category-thumbnails/{{ writeup.type }}.png" alt="">
                     </div>
                     <div class="grid-content">{{writeup.title}}</div>
                 </a>
