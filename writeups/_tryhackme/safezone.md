@@ -88,7 +88,24 @@ So we ran gobuster on it and found a index.html directory which was a login page
 
 ![](safezone7.png)
 
-And its source contained a login.js directory which gave us the creadentials.
-So we succesfully loged in....
+And its source contained a login.js directory which gave us the credentials.
+So we succesfully logged in....
 
 ![](safezone8.png)
+
+This allows us to send a message to Yash,an existing user on the system,and we find out it is susceptible to blind command injection!
+So we ssh into the machine once again using "magic" as the password,create a reverse shell in the /tmp directory and allot it universal permissions.
+
+After that we turn on the listener at the specified port and in the webpage enter the message /tmp/reverseshell(the name of our reverse-shell) and send it.
+
+![](/images/MaskdMafia/safezone-1.png)
+
+And we are logged in as Yash!
+Moving to /home/yash ,we see that it has a flag.txt there which is our user flag.
+
+![](/images/MaskdMafia/safezone-2.png)
+
+After this we execute the command "sudo -l" to see which commands the user Yash is capable of executing the machine.
+After executing bk.py we see that it copies files from its source to a destination specified ,so we try to copy the root flag from the root directory. And just like this, we reveal the root flag.
+
+![](/images/MaskdMafia/safezone-3.png)
