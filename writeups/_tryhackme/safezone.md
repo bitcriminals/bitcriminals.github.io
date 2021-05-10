@@ -1,4 +1,13 @@
-# SafeZone
+---
+title: Safe Zone
+layout: post
+author: Bit Criminals Team
+date: 2021-05-10 17:02:00 +0530
+type: Pen Testing
+difficulty: Medium
+prompt: https://tryhackme.com/room/safezone
+---
+
 
 This was an interesting and thought-provoking room!
 
