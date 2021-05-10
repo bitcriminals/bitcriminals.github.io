@@ -3,7 +3,7 @@ title: What the Flip?!
 layout: post
 author: panda1729
 date: 2021-05-08 22:00:00 +0530
-type: Cryptography
+type: Crypto
 difficulty: Medium
 prompt: No Prompt
 ---

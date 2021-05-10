@@ -3,7 +3,7 @@ title: These Ladies Paved Your Way
 layout: post
 author: _Mars
 date: 2021-05-09 18:10:00 +0530
-type: Forensics & OSINT
+type: Forensics
 difficulty: Easy
 prompt: Per womenintech.co.uk, these 10 women paved your way as technologists. One of them holds more than 100 issued patents and is known for writing understandable textbooks about network security protocols. What other secrets does she hold?
 ---

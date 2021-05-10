@@ -3,7 +3,7 @@ title: Rain in Spain
 layout: post
 author: panda1729
 date: 2021-05-09 12:00:00 +0530
-type: Miscellaneous
+type: Misc
 difficulty: Medium
 prompt: >
     I installed this cool IoT-enabled weathervane on my boat for sailing around Málaga, but the sensors seem to be giving erratic readings...

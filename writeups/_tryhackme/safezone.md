@@ -3,7 +3,7 @@ title: Safe Zone
 layout: post
 author: Bit Criminals Team
 date: 2021-05-10 17:02:00 +0530
-type: Pen Testing
+type: Pentesting
 difficulty: Medium
 prompt: https://tryhackme.com/room/safezone
 ---

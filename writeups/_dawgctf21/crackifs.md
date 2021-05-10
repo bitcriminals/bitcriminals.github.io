@@ -3,7 +3,7 @@ title: Crack IFS
 layout: post
 author: D4rkDemian
 date: 2021-05-09 12:36:00 +0530 
-type: Fwn (Forensics/Web/Network)
+type: Forensics
 difficulty: Easy
 prompt: The accounts in this QNX IFS have insecure passwords. Crack them to assemble the flag.
 ---

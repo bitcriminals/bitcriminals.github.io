@@ -3,7 +3,7 @@ title: Library
 layout: post
 author: Dark Demian
 date: 2021-05-05 15:54:00 +0530
-type: Pen Testing
+type: Pentesting
 difficulty: Easy
 prompt: https://tryhackme.com/room/bsidesgtlibrary
 ---

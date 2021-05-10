@@ -3,7 +3,7 @@ title: Deserted Island Toolkit
 layout: post
 author: MaskdMafia
 date: 2021-05-09 13:36:00 +0530
-type: Audio/Radio
+type: Misc
 difficulty: Easy
 prompt: What would a drunken sailor do? (Wrap the output in DawgCTF{ })
 
