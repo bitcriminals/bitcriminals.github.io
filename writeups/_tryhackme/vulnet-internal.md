@@ -36,3 +36,23 @@ After, that we find a redis directory in the mounted dir.Within, the redis dir w
 Within the redis.conf file we found a password
 ***B65Hx562F@ggAZ@F***
 which is most probably the password for the redis port.
+
+Now we connected to rsync and got the user flag in the sys-internal User's directory
+
+![](/images/rsync.png)
+
+```User flag : THM{da7c20696831f253e0afaca8b83c07ab}```
+
+Now we created an id_rsa key and using rsync transferred this key to authorised keys folder in the sys-internal User's directory 
+The commands are:
+
+```py
+ssh-keygen -f ./id_rsa
+rsync -ahv ./id_rsa.pub rsync://rsync-connect@<ip>/files/sys-internal/.ssh/authorized_keys
+ssh -i ./id_rsa sys-internal@10.10.53.133
+![](/images/ssh.png)
+```
+
+And then we connected using ssh to the machine..
+
+![](/images/ssh2.png)
