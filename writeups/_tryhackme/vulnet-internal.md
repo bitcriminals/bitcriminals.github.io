@@ -50,8 +50,9 @@ The commands are:
 ssh-keygen -f ./id_rsa
 rsync -ahv ./id_rsa.pub rsync://rsync-connect@<ip>/files/sys-internal/.ssh/authorized_keys
 ssh -i ./id_rsa sys-internal@10.10.53.133
-![](/images/ssh.png)
 ```
+
+![](/images/ssh.png)
 
 And then we connected using ssh to the machine..
 
