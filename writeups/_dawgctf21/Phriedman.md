@@ -3,7 +3,7 @@ title: Phriedman Systems
 layout: post
 author: Dr.DONN4
 date: 2021-05-09 16:00:00 +0530
-type: Web
+type: pentesting
 difficulty: Medium/Hard
 prompt: We want access to the CEO's secure data. Log in to their website using the CEO's account. https://phriedmansystems.onrender.com/
 ---
