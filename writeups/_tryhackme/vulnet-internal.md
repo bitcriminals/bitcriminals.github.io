@@ -62,7 +62,7 @@ After searching thoroughly through the machine we did not find anything that cou
 
 So we copy the exploit code into a file in the /tmp directory using nano and compile the code.
 
-```C
+```cpp
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
