@@ -37,6 +37,29 @@ Within the redis.conf file we found a password
 ***B65Hx562F@ggAZ@F***
 which is most probably the password for the redis port.
 
+
+After getting the password, now we know that we have to connect to redis
+So `redis-cli -h <ip>` will work in this case.And then we have to give the password and enumerate it further.I used these commands 
+
+```py
+redis-cli -h 10.10.61.143
+AUTH B65Hx562F@ggAZ@F
+SELECT 0
+KEYS *
+lrange "authlist" 0 4
+GET "internal flag"
+```
+![redis](https://user-images.githubusercontent.com/78094309/117819781-81074b00-b287-11eb-8d19-ef111a5e25fd.png)
+
+
+And hence we found our internal flag and also got another password with a hint that we have to connect to rsync..
+
+```
+THM{ff8e518addbbddb74531a724236a8221}
+Authorization for rsync://rsync-connect@127.0.0.1 with password Hcg3HP67@TW@Bc72v
+
+
+
 Now we connected to rsync and got the user flag in the sys-internal User's directory
 
 ![](/images/rsync.png)
