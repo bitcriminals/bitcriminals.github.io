@@ -34,5 +34,5 @@ First we know about the directory to be mounted and then,mount it in our local m
 After, that we find a redis directory in the mounted dir.Within, the redis dir we found a redis.conf file.
 
 Within the redis.conf file we found a password
-```B65Hx562F@ggAZ@F```
+***B65Hx562F@ggAZ@F***
 which is most probably the password for the redis port.
