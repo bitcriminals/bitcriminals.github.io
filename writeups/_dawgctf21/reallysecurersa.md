@@ -9,9 +9,9 @@ prompt: >
     I like my e's like I like my trucks: big and obnoxious
 ---
 
-Just a basic RSA challenge with a very big n. But here's the catch - n is a square! The totient function in this case is not `(p-1)<sup>2</sup>` but `p(p-1)`
+Just a basic RSA challenge with a very big n. But here's the catch - n is a square! The totient function in this case is not (p-1)<sup>2</sup> but p(p-1)
 
-Use [factordb.com](factordb.com) or `factordb-pycli` (or simply take the squareroot) to factorise the huge n and note the primes ('prime' actually since its just one)
+Use [factordb.com](http://factordb.com) or `factordb-pycli` (or simply take the squareroot) to factorise the huge n and note the primes ('prime' actually since its just one)
 
 [Download the file here](reallysecurersa.txt)
 
