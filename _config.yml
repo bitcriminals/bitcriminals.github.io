@@ -66,6 +66,10 @@ collections:
     title: "Glimpse of ISM"
     output: true
     image: "/images/ctfs/iog.jpg"
+  cyberapocalypse:
+    title: "Cyber Apocalypse"
+    output: true
+    image: "/images/ctfs/apocalypse.png"
   tryhackme:
     title: "TryHackMe"
     output: true
