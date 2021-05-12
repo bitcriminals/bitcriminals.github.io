@@ -69,7 +69,7 @@ Now we can view the user flag..
 
 ![](/images/jar3.png)
 
-After doinng `**sudo -l**` we found that we have root permissions to run any java file.
+After doing `**sudo -l**` we found that we have root permissions to run any java file.
 
 ![](/images/jar4.png)
 
