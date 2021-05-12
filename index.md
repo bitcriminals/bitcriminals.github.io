@@ -257,6 +257,32 @@ layout: blank
                             </div>
                             <div class="grid-content">$lim_$h4d¥</div>
                         </div>
+                        <div class="grid-cell">
+                            <div class="grid-image"><img src="images/otaku.png" alt="">
+                                <div class="grid-image-overlay">
+                                    <div class="overlay-text">
+                                        <ul class="social-media-links">
+                                            <li><a href="https://github.com/Ni2-1911" target="_blank"><img src="images/github.png" alt=""></a></li>
+                                            <li><a href="https://www.linkedin.com/in/nitu-kumari-407495185/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-content">Otaku_</div>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="grid-image"><img src="images/Leo.png" alt="">
+                                <div class="grid-image-overlay">
+                                    <div class="overlay-text">
+                                        <ul class="social-media-links">
+                                            <li><a href="https://github.com/Leo-2807" target="_blank"><img src="images/github.png" alt=""></a></li>
+                                            <li><a href="https://www.linkedin.com/mwlite/in/deeksha-bijarniya-50430b210" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-content">Leo</div>
+                        </div>
                     </div>
                 </div>
             </div>
