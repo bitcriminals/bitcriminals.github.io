@@ -18,8 +18,6 @@ I then ran gobuster for port 8080 and here's what I got
 
 ![](/images/dotjar4.png)
 
-I tried to login to the /manager/ directory but it asked for username and password.I was able to login to /host-manager/ but it was of no help.
-
 After searching a bit,I finally found a help 
 from my bestie-Google.I found a article about a exploit named **Ghostcat** CVE-2020-1938.
 
