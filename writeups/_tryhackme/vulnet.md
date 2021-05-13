@@ -14,7 +14,7 @@ Lets start with a nmap scan.On scanning we got port 80 and 22 port
 
 On checking the website we got a nice vulnnet page which didn't had anything important...
 
-And also in the prompt we are provided with a domain `vulnnet.thm`. So lets scan for subdomains using gobuster 
+And also in the prompt we are provided with a domain *vulnnet.thm*. So lets scan for subdomains using gobuster 
 
 ```shell
 gobuster vhost -u vulnnet.thm  -w /usr/share/dns 
@@ -44,7 +44,7 @@ After playing a lot with LFI we finally found a password hash in
 ```
 ![](/images/D4rkDemian/vulnet5.png)
 
-On cracking the hash using john we found that the auth credentials for `broadcast.vulnnet.thm` are 
+On cracking the hash using john we found that the auth credentials for *broadcast.vulnnet.thm* are 
 
 ```
 developers:9972761drmfsls
