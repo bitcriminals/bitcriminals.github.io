@@ -144,7 +144,7 @@ https://int0x33.medium.com/day-67-tar-cron-2-root-abusing-wildcards-for-tar-argu
 What this script does is basically,it creates backup of every file within the Downloads directory of the user.After reading the article I ran the commands given in the blog 
 
 ![](/images/vul4.png)
-and ran /bin/bash -p  but it didin't work.
+and ran sudo bash  but it didin't work.
 
 So,I changed my commnads a bit and used this instead.
 
