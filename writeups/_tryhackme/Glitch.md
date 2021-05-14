@@ -12,7 +12,7 @@ We start with out routine Nmap scan which reveals that port 80 (running on Node 
 
 ![](/images/MaskdMafia/glitch3.png)
 
-So we visit it in our browser to be greeted with this:
+So we add the ip to our /etc/hosts before proceeding to visit it in our browser and be greeted with this:
 
 ![](/images/MaskdMafia/glitch1.png)
 
