@@ -75,5 +75,47 @@ Looking in the directories we get our user flag.
 
 ![](/images/glitch5.png)
 
-Here's our user flag:****THM{i_don't_know_why}****
+Here's our user flag:**THM{i_don't_know_why}**
+
+After some searching we found a **.firefox** folder inside **/home/user/** directory
+
+We can take advantage of this folder and extract next user's password...
+
+Firstly we created a tar file of the .firefox folder and sent it to our terminal through nc
+
+![](/images/D4rkDemian/_glitch2.png)
+
+![](/images/D4rkDemian/_glitch3.png)
+
+After running following command we got the v0id user's password 
+
+```shell
+firefox --profile b5w4643p.default-release --allow-downgrade
+```
+
+![](/images/D4rkDemian/_glitch.png)
+
+```v0id:love_the_void```
+
+After logging as v0id I searched for some leaks through which we can become root and I found that as **doas**
+
+i ran 
+```shell
+find / -type f -perm /40000 2>/dev/null
+```
+and doas was a sus!
+
+![](/images/D4rkDemian/_glitch4.png)
+
+After reading about it in [doas](https://github.com/slicer69/doas) i used the following command and got the root
+
+```shell
+doas bash -p
+```
+![](/images/D4rkDemian/_glitch5.png)
+
+And finally got the root flag!!
+
+**THM{diamonds_break_our_aching_minds}**
+
 
