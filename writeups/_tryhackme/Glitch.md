@@ -8,7 +8,7 @@ difficulty: Easy
 prompt: https://tryhackme.com/room/glitch
 ---
 
-We start with out routine Nmap scan which reveals that 80 is the only port open out of all 65535 ports.
+We start with out routine Nmap scan which reveals that port 80 (running on Node js) is the only port open out of all 65535 ports.
 
 ![](/images/MaskdMafia/glitch3.png)
 
