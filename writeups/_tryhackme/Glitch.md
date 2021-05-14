@@ -109,7 +109,7 @@ After logging as v0id I searched for some leaks through which we can become root
 
 i ran 
 ```shell
-find / -type f -perm /40000 2>/dev/null
+find / -type f -perm /4000 2>/dev/null
 ```
 and doas was a sus!
 
