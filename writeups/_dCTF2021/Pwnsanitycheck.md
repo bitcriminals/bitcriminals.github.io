@@ -5,7 +5,7 @@ author: v1per
 date: 2021-05-17 18:53:00 +0530
 type: Pwn
 difficulty: easy
-prompt: This should take about 1337 seconds to solve.  **nc dctf-chall-pwn-sanity-check.westeurope.azurecontainer.io 7480**
+prompt: This should take about 1337 seconds to solve.nc dctf-chall-pwn-sanity-check.westeurope.azurecontainer.io 7480
 ---
 
 First, I used the file command on the **pwn_sanity_check** file. This is the output I got:
@@ -31,7 +31,7 @@ Looking around further, I found a 'win()' function which looked interesting:
 
 ![](/images/v1per/dctfpsc5.png)
 
-This function takes two parameters as input and compares their values and actually spawns a shell. Now, here I thought what if we could bypass the if conditions and directly go to the 'system("/bin/sh");' line.
+This function takes two parameters as input and compares their values and actually spawns a shell. Now, here I thought - what if we could bypass the if conditions and directly go to the 'system("/bin/sh");' line?  
 I took note of the address of the line just before the line in which the shell was being spawned: **0x004006d6**
 
 ![](/images/v1per/dctfpsc6.png)
@@ -84,7 +84,7 @@ r.interactive()
 ```
 
 And, yay! I got the shell.
-I typed in 'ls' and saw that there's a flag.txt file in there, so i did a 'cat flag.txt' and got the flag!
+I typed in 'ls' and saw that there's a flag.txt file in there, so i did a 'cat flag.txt' and got the flag!  
 ```dctf{Ju5t_m0v3_0n}```
 
 ![](/images/v1per/dctfpsc7.png)
