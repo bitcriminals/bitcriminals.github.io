@@ -36,7 +36,7 @@ I took note of the address of the line just before the line in which the shell w
 
 ![](/images/v1per/dctfpsc6.png)
 
-Now, we need to find the offset at which our control enters the win function, I used this python code to find it:
+Now, we need to find the offset at which our control enters the win function, I used this python script to find it:
 
 ```py
 from pwn import *
