@@ -18,4 +18,4 @@ I opened the animations pane and went through the sequence of objects. Clicking 
 
 I noted the characters manually and it was the flag.
 
-`DCTF{PPT_1SNT_V3RY_S3CUR3_1S_1T}}`
+`DCTF{PPT_1SNT_V3RY_S3CUR3_1S_1T}`
