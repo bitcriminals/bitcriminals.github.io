@@ -8,7 +8,7 @@ difficulty: Easy(if you understand the hint)
 prompt: What's the name of the van?
 ---
 
-And this this challenge is accompanied by a text file with some 22 characted long excrypted text for a seemingly endless amount of lines(just kidding, 10000 lines only).
+And this challenge was accompanied by a text file with some 22 characted long excrypted text for a seemingly endless amount of lines(just kidding, 10000 lines only).
 Well,the name of the van is (as most of us cartoon network fans know) "The Mystery Machine". Well,thats a weird hint.
 So I just googled "The Mystery Machine in cryptography" and i got results related to Alan Turing's great Enigma Machine.
 
