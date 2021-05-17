@@ -10,7 +10,7 @@ prompt: What's the name of the van?
 
 And this challenge was accompanied by a text file with some 22 characted long excrypted text for a seemingly endless amount of lines(just kidding, 10000 lines only).
 Well,the name of the van is (as most of us cartoon network fans know) "The Mystery Machine". Well,thats a weird hint.
-So I just googled "The Mystery Machine in cryptography" and i got results related to Alan Turing's great Enigma Machine.
+So I just googled "The Mystery Machine in cryptography" and i got results related to the Enigma Machine.
 
 And the Enigma machine has rotors and offsets and a number of other things you have to define in order to crack the code. Finding this is difficult enough for one sentence,but 10000 line? Out of the question.So this challenge lay abandoned for quite some time before finally being taken up again and it turned out to be ***quite simple***.
 
