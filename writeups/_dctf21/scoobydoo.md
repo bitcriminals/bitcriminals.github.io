@@ -4,7 +4,7 @@ layout: post
 author: MaskdMafia
 date: 2021-05-17 21:27:00 +0530
 type: Crypto
-difficulty: easy(if you understand the hint)
+difficulty: Easy(if you understand the hint)
 prompt: What's the name of the van?
 ---
 
