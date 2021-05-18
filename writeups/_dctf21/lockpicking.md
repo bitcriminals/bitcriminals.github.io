@@ -2,7 +2,7 @@
 title: Lockpicking
 layout: post
 author: Masrt
-date: 2021-05-18
+date: 2021-05-18 14:00:00 +530
 type: Crypto
 difficulty: Hard
 prompt: We were playing a game of cows and bulls and decided 260 guesses was enough for 200 pins.
