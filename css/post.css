@@ -65,9 +65,10 @@ main img {
     background-color: #161713;
 }
 
-.highlight pre {
+.highlight pre.highlight {
     background-color: transparent;
     margin: 0;
+    white-space: break-spaces;
 }
 
 .highlight * {
@@ -82,6 +83,11 @@ footer {
 
 #solution_start {
     margin-top: 2em;
+}
+
+code.language-plaintext.highlighter-rouge {
+    background: #161713;
+    padding: .05em .3em;
 }
 
 @media (min-width: 768px) {
