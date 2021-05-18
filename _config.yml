@@ -78,7 +78,7 @@ collections:
     title: "Dawg CTF 2021"
     output: true
     image: "/images/ctfs/DawgCTF21.png"
-  dctf2021:
+  dctf21:
     title: "dCTF 2021"
     output: true
     image: "/images/ctfs/dragonsec_logo_flag.gif"
