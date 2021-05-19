@@ -190,7 +190,7 @@ layout: blank
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-content">_Mars</div>
+                            <div class="grid-content">Mars_</div>
                         </div>
                         <div class="grid-cell">
                             <div class="grid-image"><img src="images/v1per.png" alt="">
