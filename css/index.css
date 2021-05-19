@@ -150,6 +150,7 @@
 }
 .grid-content {
     font-size: 1.2em;
+    word-break: break-word;
 }
 
 .writeup-grid-content {
