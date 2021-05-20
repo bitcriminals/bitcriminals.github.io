@@ -219,7 +219,7 @@ layout: blank
                             <div class="grid-content">Dr. DrunkHigh</div>
                         </div>
                         <div class="grid-cell">
-                            <div class="grid-image"><img src="images/dummy-dp.jpg" alt="">
+                            <div class="grid-image"><img src="images/Alphx.jpg" alt="">
                                 <div class="grid-image-overlay">
                                     <div class="overlay-text">
                                         <ul class="social-media-links">
