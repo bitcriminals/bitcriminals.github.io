@@ -93,8 +93,9 @@ Now after getting the user flag we do sudo -l to get this:
 Now after a bit of google search I get this root priviledge escalation technique named SETENV in this blog https://book.hacktricks.xyz/linux-unix/privilege-escalation
 
 I tried as was done in the blog that is ran 
-``` sudo PYTHONPATH=/tmp/ /usr/bin/python3 /opt/backup.py 
-```
+
+sudo PYTHONPATH=/tmp/ /usr/bin/python3 /opt/backup.py 
+
 But it didn't worked.
 
 ![](/images/Dr.DONN4/dotpy2.png)
@@ -102,16 +103,20 @@ But it didn't worked.
 Hence, I read the backup.py code and found mistakes in the program but we didn't had permission to change it.But we have a zipfile module we can make use of this module by 
 creating one in the /tmp/ directory.
 
+
 ![](/images/Dr.DONN4/dotpy3.png)
+
 
 So, I created one zipfile with 
 
-```
+
 echo "import pty;pty.spawn('/bin/sh')" > /tmp/zipfile.py
-```
+
 
 And ran the command again :
 
+
 ![](/images/Dr.DONN4/dotpy4.png)
+
 
 and we have the root flag
