@@ -5,7 +5,7 @@ author: Masrt
 date: 2021-05-18 14:00:00 +530
 type: Crypto
 difficulty: Hard
-prompt: We were playing a game of cows and bulls and decided 260 guesses was enough for 200 pins. nc dctf1-chall-lockpicking.westeurope.azurecontainer.io 7777
+prompt: We were playing a game of cows and bulls and decided 260 guesses was enough for 200 pins. `nc dctf1-chall-lockpicking.westeurope.azurecontainer.io 7777`
 ---
 
 Now this was an interesting challenge to say the least, the approach was clear to me rather quickly but seeing as things didn't addup, I thought there was something else at play here; which there was, but not where I expected it to be. Coupled with the fact that my recent distaste towards asking the authors regarding chall related, leads us here. Into this writeup... so shall we ?
@@ -106,6 +106,6 @@ This was a neat challenge with a easily overlooked issue. Hence Peeps, we must a
 
 
 Below are links to my scripts:
-[solve.py](/scripts/Masrt/dctf21/solve.py) [copied_n_modified.py](/scripts/Masrt/dctf21/cow_bull.py) [challenge_file](scripts/Masrt/dctf21/lockpicking.py)
+[solve.py](/scripts/Masrt/dctf21/solve.py) [copied_n_modified.py](/scripts/Masrt/dctf21/cow_bull.py) [challenge_file](/scripts/Masrt/dctf21/lockpicking.py)
 
 Don't use them, they are bad. I just wrote this writeup for memory sake.
