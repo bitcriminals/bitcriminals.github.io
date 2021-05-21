@@ -1,5 +1,5 @@
 ---
-title: PrivateEncryptionMistake
+title: Private Encryption Mistake
 layout: post
 author: Dr.DONN4
 date: 2021-05-19 17:00:00 +530
