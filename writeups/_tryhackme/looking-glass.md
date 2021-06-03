@@ -38,3 +38,25 @@ machine.
 Into the tweedledum user we found a hash in humptydumpty.txt file.
 
 ![](/images/Dr.DONN4/mirror3.png) 
+
+
+So now we logged in as humtydumpty user.After finding a lot we came to see that the .ssh folder of alice user is readable to our current user.
+We found the id_rsa key using find command and hence we can now login through ssh as alice..
+
+![](/images/D4rkDemian/lookingglass.png)
+
+After spending lot of time in user Alice we got nothing but atlast we got our path to root in */etc/sudoers.d/* directory which contained different text files having their names as of the user's..
+
+So on viewing Alice we came to know that user Alice can use /bin/bash as a root using the host name as **ssalg-gnikool** .
+
+![](/images/D4rkDemian/lookingglass1.png)
+
+And there we got our root flag since it is inverted hence we reversed and so finally the box is over ..
+
+![](/images/D4rkDemian/lookingglass3.png)
+
+```
+thn{bc2337b6f97d057b01da718ced6ead3f}
+```
+
+
