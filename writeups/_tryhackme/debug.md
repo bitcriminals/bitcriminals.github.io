@@ -52,7 +52,7 @@ Note that we also found a **/index.php** from gobuster. Visiting it, we see a Fo
 
 ![](/images/v1per/Debug_6.png)
 
-Filling it with arbitrary values and submitting it, we see that it gets displayed in **http://<machine_ip>:80/message.txt**, which is what the PHP file we found is doing. I wrote this PHP code for the attack (replace <your_tun0_ip> with, well, what it says):
+Filling it with arbitrary values and submitting it, we see that it gets displayed in **http://<machine_ip>:80/message.txt**, which is what the PHP file we found is doing. I wrote this PHP code for the attack (replace <your_tun0_IP> with, well, what it says):
 
 ```php
 <?php
