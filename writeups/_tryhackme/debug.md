@@ -33,7 +33,7 @@ We can see that there's a web-server open, so let's visit the website.
 It's an Apache2 Ubuntu Default page. Nothing much in here. Let's run gobuster in directory busting mode to find some hidden directories.
 
 ```shell
-gobuster dir -u <box_ip> -w /usr/share/wordlists/dirb/common.txt -z -x html,txt,php
+gobuster dir -u $MACHINE_IP -w /usr/share/wordlists/dirb/common.txt -z -x html,txt,php
 ```
 
 ![](/images/v1per/Debug_3.png)
