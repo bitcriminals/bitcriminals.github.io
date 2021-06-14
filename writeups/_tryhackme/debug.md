@@ -90,3 +90,43 @@ And YAY! We have got our shell!
 
 ![](/images/v1per/Debug_9.png)
 
+On displaying the contents of .htpasswd we find the hash of user james.
+
+```                          
+james:$apr1$zPZMix2A$d8fBXH0em33bfI9UTt9Nq1 
+```
+Now we can ssh into the box as user james and get the user flag.
+
+We find a note left to james in /home/james directory.
+
+```s
+james@osboxes:~$ cat Note-To-James.txt                         
+Dear James,                                                                
+                                                                                                                                                      
+As you may already know, we are soon planning to submit this machine to THM's CyberSecurity Platform! Crazy... Isn't it? 
+                                                                           
+But there's still one thing I'd like you to do, before the submission.
+                                     
+Could you please make our ssh welcome message a bit more pretty... you know... something beautiful :D                                                 
+
+I gave you access to modify all these files :) 
+
+Oh and one last thing... You gotta hurry up! We don't have much time left until the submission!
+
+Best Regards,
+
+root
+```
+On looking at the bash history we find this file /etc/update-motd.d/00-header so we try to see what it does.
+We edit the file and add the following line to the top of the file contents:
+```
+chmod +s /bin/bash
+```
+Now we have to keep in mind that the files are executed when the user logs in via SSH, as is evident from the note left to james.
+So we open another terminal and SSH as user james.
+After this we can just execute the command:
+```
+/bin/bash -p
+```
+and we have escalated out privileges to root. Now we can go to the root directory and print the contents of root.txt.
+
