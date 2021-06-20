@@ -154,3 +154,91 @@ Click on **PARSE**, and check the listener.
 ![](/images/v1per/ophiuchi4.png)
 
 Yay! We have got our shell.
+
+In the home directory we get a user named admin which means we have to do user escalation from tomcat to admin.
+
+Now,if we search a bit we will found some ssh login creds in the directory /opt/tomcat/conf.
+
+username="admin" password="whythereisalimit"
+
+Now, we do ssh login into the admin shell.
+
+Then, it's time for root escalation.Doing, sudo -l we find this:
+
+![](/images/Dr.DONN4/opihuchi1.png)
+
+Now, we open the file /opt/wasm-functions/index.go
+and we get this script.
+
+```
+package main
+
+import (
+        "fmt"
+        wasm "github.com/wasmerio/wasmer-go/wasmer"
+        "os/exec"
+        "log"
+)
+
+
+func main() {
+        bytes, _ := wasm.ReadBytes("main.wasm")
+
+        instance, _ := wasm.NewInstance(bytes)
+        defer instance.Close()
+        init := instance.Exports["info"]
+        result,_ := init()
+        f := result.String()
+        if (f != "1") {
+                fmt.Println("Not ready to deploy")
+        } else {
+                fmt.Println("Ready to deploy")
+                out, err := exec.Command("/bin/sh", "deploy.sh").Output()
+                if err != nil {
+                        log.Fatal(err)
+                }
+                fmt.Println(string(out))
+        }
+}
+```
+so, this script basically run a binary main.wasm and deploys a file deploy.sh with the condition that f which is a constant is 1.
+
+Now,if we go to the /opt/wasm-functions directory we find a main.wasm file.Now, we move this wasm file from this directory to 
+the temp directory and also create a deploy.sh file as we expose the fact that none of the path of these 
+files is not mentioned in the script.Now, we run 
+
+```sudo /usr/bin/go run /opt/wasm-functions/index.go```
+But, we get a error "Not ready to deploy" which  is clearly becoz f is not equal to 1.
+
+![](/images/Dr.DONN4/opihuchi2.png)
+
+which means we have to chnage the main.wasm file.
+
+Hence we tranferred the wasm file to our local machine.After a bit of research we found a way to convert main.wasm to main.wat
+which is the readable form of the binary https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm.
+I used the commnads as directed in the blog and converted main.wsm to main.wat 
+and I found this written in assembly.
+
+```
+(module
+  (type (;0;) (func (result i32)))
+  (func $info (type 0) (result i32)
+    i32.const 0)
+  (table (;0;) 1 1 funcref)
+  (memory (;0;) 16)
+  (global (;0;) (mut i32) (i32.const 1048576))
+  (global (;1;) i32 (i32.const 1048576))
+  (global (;2;) i32 (i32.const 1048576))
+  (export "memory" (memory 0))
+  (export "info" (func $info))
+  (export "__data_end" (global 1))
+  (export "__heap_base" (global 2)))
+
+```
+After a bit of research and learning of the wasm assembly we found that value of variable f is in i32.const which is currently 
+0 and hence we change it to 1.Then, we send the wasm file back to the attack machine and run the same sudo command again and it 
+got deployed this time.
+
+![](/images/Dr.DONN4/opihuchi.png)
+
+And we have the root flag.
