@@ -1,5 +1,9 @@
 let currentTerminal, directoryStructure = {};
 
+console.log("%cHello", "font-size: 40px");
+console.log("%cLooks like you are on the right track", "font-size: 20px");
+console.log("%cHere's your way forward.\nRun sayhello", "font-size: 14px");
+
 function sayhello() {
     console.log("Hello. But you said it in the wrong place. https://www.latlmes.com/tech/debug-js-1");
     openTerminal();
@@ -59,11 +63,12 @@ function initializeDirectory() {
     directoryStructure = {
         '.htaccess': 'This ain\'t an Apache server xD',
         '.itshardtoseeme': `Yay!<br>
-        I was thinking how about we have this terminal hidden using the sayhello thing<br>
-        and have directories for each teammate where they can put something about themselves<br>
-        or whatever<br>
+        Welcome to BIT CRIMINALS!<br>
+        Hope you have a lovely time here and<br>
+        and if you are seeing this in the source code,<br>
+        you wasted all my efforts!<br>
         i_have_seen_the_real_website<br>
-        DM me the flag and if you like the idea or not`
+        Here's the flag`
     };
 }
 
