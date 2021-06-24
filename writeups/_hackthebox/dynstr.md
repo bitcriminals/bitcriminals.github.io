@@ -17,7 +17,7 @@ So first of all we run an nmap scan and get the open ports.
 ```
 We visit port 80 in our browser and discover the following information:
 
-![](/images/MaskdMafia/dynstr.md)
+![](/images/MaskdMafia/dynstr.png)
 
 We referred to these web-pages (documentation was scarce):
 
