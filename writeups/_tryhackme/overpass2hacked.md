@@ -10,7 +10,7 @@ prompt: https://tryhackme.com/room/overpass2hacked
 
 This room was not like the usual ones. We had to first analyze a .pcapng file. 
 
-#Forensics - Analyse the PCAP
+# Forensics - Analyse the PCAP
 
 **What was the URL of the page they used to upload a reverse shell?**
 
@@ -43,13 +43,13 @@ On going further through the above TCP stream, we understood that the attacker p
 
 Futher down in the same TCP stream, the attacker viewed the "/etc/shadow" file. Here we found the password hashes of five users. (Refer the image above)
 We copied the password hashes into another file and used John the Ripper to crack the hashes. We used the fasttrack wordlist as per the requirment. The command used was
-```john --wordlist=/usr/share/wordlists/fasttrack.txt hash1```
+>john --wordlist=/usr/share/wordlists/fasttrack.txt hash1
 
 ![](/images/Mars/overpass6.png)
 
 Hence ```4``` hashes were cracked.
 
-#Research - Analyse the code
+# Research - Analyse the code
 
 The attacker created a backdoor using the code from ***https://github.com/NinjaJc01/ssh-backdoor***. So we cloned this repository to analyze the code.
 
@@ -78,11 +78,11 @@ Futher down in the same file we found the hardcoded salt for the backdoor.
 **Crack the hash using rockyou and a cracking tool of your choice. What's the password?**
 
 We created a file with the above hash and the hardcoded salt for the backdoor in the format hash$salt ahd used John the Ripper.
-```john -form=dynamic='sha512($p.$s)' --wordlist=/usr/share/wordlists/rockyou.txt hash2```
+>john -form=dynamic='sha512($p.$s)' --wordlist=/usr/share/wordlists/rockyou.txt hash2
 The password was ```november16```
 
 
-#Attack - Get back in!
+# Attack - Get back in!
 
 **The attacker defaced the website. What message did they leave as a heading?**
 
@@ -95,7 +95,7 @@ On opening the website "http://<box-ip>, we foind this.
 **What's the user flag?**
 
 We had to begin with nmap scan, but this time it was unusually long. But we know that the attacker used port 2222. So we logged in at port 2222 uing ssh
-```ssh -p 2222 james@<10.10.114.96>```
+>ssh -p 2222 james@<10.10.114.96>
 
 Finally result of the nmap scan came!
 ![](/images/Mars/overpass9.png)
@@ -114,7 +114,9 @@ Searching for a way to break in, we looked at all the files in the home director
 
 ![](/images/Mars/overpass12.png)
 
-On execution using ```./.suid_bash``` it gave us a shell, but the user was still james. So this time we executed using ```./.suid_bash -p``` We became the root!!!
+On execution using "./.suid_bash" it gave us a shell, but the user was still james. So this time we executed
+>./.suid_bash -p
+ We became the root!!!
 
 ![](/images/Mars/overpass13.png)
 
