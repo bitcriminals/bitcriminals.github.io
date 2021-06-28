@@ -55,7 +55,7 @@ Hence ```4``` hashes were cracked.
 
 The attacker created a backdoor using the code from ***https://github.com/NinjaJc01/ssh-backdoor***. So we cloned this repository to analyze the code.
 
-***What's the default hash for the backdoor?***
+**What's the default hash for the backdoor?**
 
 In the main.go file, we found the default hash for the back door. Also note the port 2222 which the attacker used.
 
@@ -63,7 +63,7 @@ In the main.go file, we found the default hash for the back door. Also note the 
 
 ```bdd04d9bb7621687f5df9001f5098eb22bf19eac4c2c30b6f23efed4d24807277d0f8bfccb9e77659103d78c56e66d2d7d8391dfc885d0e9b68acd01fc2170e3```
 
-***What's the hardcoded salt for the backdoor?***
+**What's the hardcoded salt for the backdoor?**
 
 Futher down in the same file we found the hardcoded salt for the backdoor.
 
@@ -71,13 +71,13 @@ Futher down in the same file we found the hardcoded salt for the backdoor.
 
 ```1c362db832f3f864c8c2fe05f2002a05```
 
-***What was the hash that the attacker used? - go back to the PCAP for this!***
+**What was the hash that the attacker used? - go back to the PCAP for this!**
 
 ![](/images/Mars/overpass5.png)
 
 ```6d05358f090eea56a238af02e47d44ee5489d234810ef6240280857ec69712a3e5e370b8a41899d0196ade16c0d54327c5654019292cbfe0b5e98ad1fec71bed```
 
-***Crack the hash using rockyou and a cracking tool of your choice. What's the password?***
+**Crack the hash using rockyou and a cracking tool of your choice. What's the password?**
 
 We created a file with the above hash and the hardcoded salt for the backdoor in the format hash$salt ahd used John the Ripper.
 ```john -form=dynamic='sha512($p.$s)' --wordlist=/usr/share/wordlists/rockyou.txt hash2```
@@ -86,7 +86,7 @@ The password was ```november16```
 
 #Attack - Get back in!
 
-***The attacker defaced the website. What message did they leave as a heading? ***
+**The attacker defaced the website. What message did they leave as a heading?**
 
 On opening the website "http://<box-ip>, we foind this.
 
@@ -94,7 +94,7 @@ On opening the website "http://<box-ip>, we foind this.
 
 ```H4ck3d by CooctusClan```
 
-***What's the user flag?***
+**What's the user flag?**
 
 We had to begin with nmap scan, but this time it was unusually long. But we know that the attacker used port 2222. So we logged in at port 2222 uing ssh
 ```ssh -p 2222 james@<10.10.114.96>```
@@ -106,9 +106,9 @@ We found the user falg in user.txt in the home directory of james.
 
 ![](/images/Mars/overpass11.png)
 
-```***thm{d119b4fa8c497ddb0525f7ad200e6567}***```
+```thm{d119b4fa8c497ddb0525f7ad200e6567}```
 
-***What's the root flag?***
+**What's the root flag?**
 
 Now comes the best part, privelage escelation.
 We tried "sudo -l" as usual but this time the old password was incorrect. This meant the password was changed. The attacker is a smart guy!
