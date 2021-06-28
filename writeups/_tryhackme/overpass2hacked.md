@@ -87,7 +87,7 @@ The password was ```november16```
 
 **The attacker defaced the website. What message did they leave as a heading?**
 
-On opening the website "http://<box-ip>, we foind this.
+On opening the website "http://10.10.114.96", we found this.
 
 ![](/images/Mars/overpass10.png)
 
@@ -117,6 +117,7 @@ Searching for a way to break in, we looked at all the files in the home director
 
 On execution using "./.suid_bash" it gave us a shell, but the user was still james. So this time we executed
 >./.suid_bash -p
+
  We became the root!!!
 
 ![](/images/Mars/overpass13.png)
