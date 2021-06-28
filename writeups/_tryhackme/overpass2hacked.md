@@ -79,6 +79,7 @@ Futher down in the same file we found the hardcoded salt for the backdoor.
 
 We created a file with the above hash and the hardcoded salt for the backdoor in the format hash$salt ahd used John the Ripper.
 >john -form=dynamic='sha512($p.$s)' --wordlist=/usr/share/wordlists/rockyou.txt hash2
+
 The password was ```november16```
 
 
