@@ -41,9 +41,7 @@ On going further through the above TCP stream, we understood that the attacker p
 
 **Using the fasttrack wordlist, how many of the system passwords were crackable?**
 
-![](/images/Mars/overpass5.png)
-
-Futher down in the same TCP stream, the attacker viewed the "/etc/shadow" file. Here we found the password hashes of five users.
+Futher down in the same TCP stream, the attacker viewed the "/etc/shadow" file. Here we found the password hashes of five users. (Refer the image above)
 We copied the password hashes into another file and used John the Ripper to crack the hashes. We used the fasttrack wordlist as per the requirment. The command used was
 ```john --wordlist=/usr/share/wordlists/fasttrack.txt hash1```
 
