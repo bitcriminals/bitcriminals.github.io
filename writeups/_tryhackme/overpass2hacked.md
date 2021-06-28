@@ -95,7 +95,7 @@ On opening the website "http://10.10.114.96", we found this.
 
 **What's the user flag?**
 
-We had to begin with nmap scan, but this time it was unusually long. But we know that the attacker used port 2222. So we logged in at port 2222 uing ssh
+We had to begin with nmap scan, but this time it was unusually long. But we knew that the attacker used port 2222. So we logged in at port 2222 uing ssh
 >ssh -p 2222 james@<10.10.114.96>
 
 Finally result of the nmap scan came!
