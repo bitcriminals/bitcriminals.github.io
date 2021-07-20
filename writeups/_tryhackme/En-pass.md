@@ -61,9 +61,13 @@ getting user.txt
 ## STEP_6 ==> ROOT.TXT
 here we get a file in this path
 this is crontab so we have to apply same conditions as follows for privilage escalation
+
 ![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root1.png)
+
 ![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root2.png)
+
 ![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root3.png)
+
 ![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root4.png)
 
 ------------------------------------------------------------------
