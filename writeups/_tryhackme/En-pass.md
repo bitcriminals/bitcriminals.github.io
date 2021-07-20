@@ -1,5 +1,13 @@
-# BOX NAME : EN-PASS
--------------------------------------------
+---
+title: En-pass
+layout: post
+author: Bit Criminals Team
+date: 2021-06-08 17:02:00 +0530
+type: Pentesting
+difficulty: Medium
+prompt: https://tryhackme.com/room/En-pass
+---
+
 ## STEP_1 ==> NMAP SCAN
 
 ![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/en-pass_nmap.png)
