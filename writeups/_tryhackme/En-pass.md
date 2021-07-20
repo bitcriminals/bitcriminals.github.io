@@ -10,24 +10,25 @@ prompt: https://tryhackme.com/room/En-pass
 
 ## STEP_1 ==> NMAP SCAN
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/en-pass_nmap.png)
+![](/images/otaku_/en-pass_nmap.png)  
 
-here we get a ssh and a http server.
+here we get a ssh and a http server.  
 
--------------------------------------------
-## STEP_2 ==> GOBUSTER
+-------------------------------------------  
 
-starting with gobuster on sever.
+## STEP_2 ==> GOBUSTER  
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_gobuster.png)
+starting with gobuster on sever.  
 
-now finding more in web directory
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_gobuster_1.png)
+![](/images/otaku_/enpass_gobuster.png)  
+
+now finding more in web directory  
+![](/images/otaku_/enpass_gobuster_1.png)  
 
 by looking more we get this directory ==> /web/resources/infoseek/configure/key
-on this directory we get a ENCRYPTED ssh key.
+on this directory we get a ENCRYPTED ssh key.  
 
-------------------------------------------------------------
+------------------------------------------------------------  
 ## STEP_3 ==> OPEN OTHER DIRECTORY
 
 ### 1 ==> reg.php
@@ -50,8 +51,8 @@ by using ==> https://github.com/intrudir/403fuzzer
 
 command ==> python3 403fuzzer.py -u http://10.10.87.98:8001/403.php -hc 403,404,400 -p http://localhost:8080/
 
-checking response from burp.
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_burp.jpg)
+checking response from burp.  
+![](/images/otaku_/enpass_burp.jpg)  
 here we get username => {imsau}
 
 ---------------------------------------------------------------
@@ -63,21 +64,21 @@ command ==> openssl rsa -in key -out id_rsa
 ## STEP_5 ==> USER.TXT
 OPEN SSH SHELL --> 
 stabalising shell by command => /usr/bin/script -qc /bin/bash /dev/null
-getting user.txt
+getting user.txt  
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/user_flag.png)
+![](/images/otaku_/user_flag.png)  
 
-----------------------------------------------------------------
-## STEP_6 ==> ROOT.TXT
+----------------------------------------------------------------  
+## STEP_6 ==> ROOT.TXT  
 here we get a file in this path
-this is crontab so we have to apply same conditions as follows for privilage escalation
+this is crontab so we have to apply same conditions as follows for privilage escalation  
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root1.png)
+![](/images/otaku_/enpass_root1.png)  
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root2.png)
+![](/images/otaku_/enpass_root2.png)  
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root3.png)
+![](/images/otaku_/enpass_root3.png)  
 
-![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root4.png)
+![](/images/otaku_/enpass_root4.png)  
 
 ------------------------------------------------------------------
