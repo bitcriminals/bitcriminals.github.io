@@ -28,7 +28,7 @@ as here we can make many password that only consist of symbol and satisfyting th
 ```strlen($val[0]) == 2) and (strlen($val[8]) ==  3 )
 $val[5] !=$val[8]  and $val[3]!=$val[7]
 ```
-so take input ==> {**,**,**,***,**,**,**,**,***}
+so take input ==>  {@@,@@,@@,@@@,@@,@@,@@,@@@,@@@}
 and we get password ==> {cimihan_are_you_here?}
 
 ### 2 ==> ./zip
