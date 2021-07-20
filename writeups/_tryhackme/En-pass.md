@@ -56,7 +56,9 @@ command ==> openssl rsa -in key -out id_rsa
 OPEN SSH SHELL --> 
 stabalising shell by command => /usr/bin/script -qc /bin/bash /dev/null
 getting user.txt
+
 ![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/user_flag.png)
+
 ----------------------------------------------------------------
 ## STEP_6 ==> ROOT.TXT
 here we get a file in this path
