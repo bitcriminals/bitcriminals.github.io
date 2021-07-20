@@ -14,7 +14,6 @@ prompt: https://tryhackme.com/room/En-pass
 
 here we get a ssh and a http server.  
 
--------------------------------------------  
 
 ## STEP_2 ==> GOBUSTER  
 
@@ -28,13 +27,14 @@ now finding more in web directory
 by looking more we get this directory ==> /web/resources/infoseek/configure/key
 on this directory we get a ENCRYPTED ssh key.  
 
-------------------------------------------------------------  
+  
 ## STEP_3 ==> OPEN OTHER DIRECTORY
 
 ### 1 ==> reg.php
 here we get a source code.
 as here we can make many password that only consist of symbol and satisfyting these condition
-```strlen($val[0]) == 2) and (strlen($val[8]) ==  3 )
+```
+strlen($val[0]) == 2) and (strlen($val[8]) ==  3 )
 $val[5] !=$val[8]  and $val[3]!=$val[7]
 ```
 so take input ==>  {@@,@@,@@,@@@,@@,@@,@@,@@@,@@@}
@@ -55,12 +55,12 @@ checking response from burp.
 ![](/images/otaku_/enpass_burp.jpg)  
 here we get username => {imsau}
 
----------------------------------------------------------------
+
 ## STEP_4 ==> DECRYPTYING SSH KEY
 here we decrypt sshkey by using this command and password we get in step3.
 command ==> openssl rsa -in key -out id_rsa
 
-----------------------------------------------------------------
+
 ## STEP_5 ==> USER.TXT
 OPEN SSH SHELL --> 
 stabalising shell by command => /usr/bin/script -qc /bin/bash /dev/null
@@ -68,7 +68,7 @@ getting user.txt
 
 ![](/images/otaku_/user_flag.png)  
 
-----------------------------------------------------------------  
+ 
 ## STEP_6 ==> ROOT.TXT  
 here we get a file in this path
 this is crontab so we have to apply same conditions as follows for privilage escalation  
@@ -81,4 +81,4 @@ this is crontab so we have to apply same conditions as follows for privilage esc
 
 ![](/images/otaku_/enpass_root4.png)  
 
-------------------------------------------------------------------
+
