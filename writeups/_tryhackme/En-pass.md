@@ -1,10 +1,14 @@
 # BOX NAME : EN-PASS
->-------------------------------------------
+-------------------------------------------
 ## STEP_1 ==> NMAP SCAN
+
 ![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/en-pass_nmap.png)
+
 here we get a ssh and a http server.
->-------------------------------------------
+
+-------------------------------------------
 ## STEP_2 ==> GOBUSTER
+
 starting with gobuster on sever.
 
 ![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_gobuster.png)
@@ -14,8 +18,9 @@ now finding more in web directory
 
 by looking more we get this directory ==> /web/resources/infoseek/configure/key
 on this directory we get a ENCRYPTED ssh key.
->------------------------------------------------------------
-##STEP_3 ==> OPEN OTHER DIRECTORY
+
+------------------------------------------------------------
+## STEP_3 ==> OPEN OTHER DIRECTORY
 
 ### 1 ==> reg.php
 here we get a source code.
@@ -42,19 +47,23 @@ checking response from burp.
 here we get username => {imsau}
 
 ---------------------------------------------------------------
-STEP_4 ==> DECRYPTYING SSH KEY
+## STEP_4 ==> DECRYPTYING SSH KEY
 here we decrypt sshkey by using this command and password we get in step3.
 command ==> openssl rsa -in key -out id_rsa
 
 ----------------------------------------------------------------
-STEP_5 ==> USER.TXT
+## STEP_5 ==> USER.TXT
 OPEN SSH SHELL --> 
 stabalising shell by command => /usr/bin/script -qc /bin/bash /dev/null
 getting user.txt
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/user_flag.png)
 ----------------------------------------------------------------
-SEEP_6 ==> ROOT.TXT
+## STEP_6 ==> ROOT.TXT
 here we get a file in this path
-*FILE.PY*
 this is crontab so we have to apply same conditions as follows for privilage escalation
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root1.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root2.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root3.png)
+![](https://github.com/bitcriminals/bitcriminals.github.io/blob/main/images/otaku_/enpass_root4.png)
 
 ------------------------------------------------------------------
