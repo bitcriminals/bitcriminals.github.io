@@ -18,9 +18,9 @@ here we get a ssh at port 22 and a http server at 8081 and a non standard http p
 
 starting with gobuster on port 8081.  
 
-![](/images/whitefang/ultratech1_gobuster8081)  
+![](/images/whitefang/ultratech1_gobuster8081.png)  
   
-![](/images/whitefang/ultratech1_gobuster31331)  
+![](/images/whitefang/ultratech1_gobuster31331.png)  
 
 ## STEP_3 ==> OPEN WEB
 
@@ -58,18 +58,18 @@ here we can see ping function works on port 8081
 >http://[ip]:8081/ping?=[tun0ip]
 here we get response ,now try another commands
 
-![](/images/whitefang/ultratech1_ls)
+![](/images/whitefang/ultratech1_ls.png)
 
-![](/images/whitefang/ultratech1_cat)    
+![](/images/whitefang/ultratech1_cat.png)    
 
 here we get hash . now cracking it by ![CRACKSTATION](https://crackstation.net/)
 
-![](/images/whitefang/ultratech1_pass)
+![](/images/whitefang/ultratech1_pass.png)
  
 ## STEP_5 ==> SSH
 OPEN SSH SHELL --> 
 here we get docker file
 
-![](/images/whitefang/ultratech1_root)
+![](/images/whitefang/ultratech1_root.png)
 
 >---------------------------------------------
