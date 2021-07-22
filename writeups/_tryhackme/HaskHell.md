@@ -1,5 +1,5 @@
 ---
-title: Hashkhell
+title: Haskhell
 layout: post
 author: Bit Criminals Team
 date: 2021-07-21 14:00:00 +0530
