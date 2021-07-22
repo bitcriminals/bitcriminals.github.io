@@ -35,11 +35,15 @@ main=do
     putStr contents
     hClose handle
     
-![](/images/alphx/private key.png)    
+![](/images/alphx/privatekey.png)    
 
 Now , we can get a ssh shell using this private key:
+
 ![](/images/alphx/shell-prof.png)
+
  and we can get the user flag now
+ 
+ 
  ![](/images/alphx/userflag.png)   
  
  
@@ -47,7 +51,8 @@ Now , we can get a ssh shell using this private key:
  
  we can see that */usr/bin/flask run* runs as root in the user prof
  and thus we can see its vulnerability in GTFObins and can get root access
- ![](/images/alphx/privilege Escalation.png)
+ 
+ ![](/images/alphx/privilegeEscalation.png)
  
  
 Thus we get root access and can get root user flag!
