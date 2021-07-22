@@ -62,7 +62,7 @@ here we get response ,now try another commands
 
 ![](/images/whitefang/ultratech1_cat.png)    
 
-here we get hash . now cracking it by ![CRACKSTATION](https://crackstation.net/)
+here we get hash . now cracking it by >https://crackstation.net/
 
 ![](/images/whitefang/ultratech1_pass.png)
  
