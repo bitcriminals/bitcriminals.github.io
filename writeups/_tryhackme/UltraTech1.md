@@ -10,7 +10,7 @@ prompt: https://tryhackme.com/room/ultratech1
 
 ## STEP_1 ==> NMAP SCAN
 
-![](/images/whitefang/ultratech1_nmap)  
+![](/images/whitefang/ultratech1_nmap.png)  
 
 here we get a ssh at port 22 and a http server at 8081 and a non standard http porty 31331.
 
