@@ -57,7 +57,7 @@ On refreshing the webpage we found this
 
 ![](/images/Mars/meta11.png)
 
-In the webapp.ini file we also found a username and password. on using that username here, we find that the password is 'thecat' (we already)
+In the webapp.ini file we also found a username and password. on using that username here, we find that the password is 'thecat' (we already know)
 But given the fact that there is only one input, the next thought was sqlinjection. Thus, we used sqlmap.
 
 We ran the following command and found that the DBMS (Data Base Managament System) was run by mysql
