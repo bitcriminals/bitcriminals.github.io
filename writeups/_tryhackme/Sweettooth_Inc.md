@@ -87,7 +87,7 @@ uzJk6Ry98d8C
 Now that we have the username and password we can ssh into the machine
 
 ```
-ssh uzJk6Ry98d8C@10.10.127.163 -p 8086
+ssh -L 2376:127.0.0.1:8080 uzJk6Ry98d8C@10.10.72.25 -p 2222
 ```
 
 Now we can read the user.txt
