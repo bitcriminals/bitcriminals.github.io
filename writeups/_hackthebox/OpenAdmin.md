@@ -2,7 +2,7 @@
 title: OpenAdmin
 layout: post
 author: Bit Criminals Team
-date: 2021-07-27 17:02:00 +0530
+date: 2021-07-29 14:00:00 +0530
 type: Pentesting
 difficulty: Medium
 prompt: https://app.hackthebox.eu/machine/OpenAdmin
