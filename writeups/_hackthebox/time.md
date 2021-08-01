@@ -8,7 +8,7 @@ difficulty: Medium
 prompt: https://app.hackthebox.eu/machines/286
 ---
 
-##Enumeration:
+## Enumeration:
 I found the following open ports in nmap scan:
 ![](/images/alphx/nmap1.png) 
 
@@ -35,10 +35,10 @@ Now that the payload is ready, I have to make sure there is a listener running t
 Finally,I got the shell with users ‘pericles’.
 ![](/images/alphx/user_shell1.png)
 
-![](/images/alphx/user flag1.png)
+![](/images/alphx/user_flag1.png)
 
 
-##Root Flag:
+## Root Flag:
 I installed linpeas.sh
 And found the suid binary or other vulnerability if present.
 
@@ -54,10 +54,10 @@ I created and copied private rsa key in order to gain root priviledges.
 ![](/images/alphx/rsa1.png)
 
   
-![](/images/alphx/root access1.png)
+![](/images/alphx/root_access1.png)
 
   
-![](/images/alphx/root flag1.png)
+![](/images/alphx/root_flag1.png)
 
   
 ![](/images/alphx/rootflag1.png)
