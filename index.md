@@ -114,20 +114,6 @@ layout: blank
                             <div class="grid-content">MaskdMafia</div>
                         </div>
                         <div class="grid-cell">
-                            <div class="grid-image"><img src="images/panda.jpg" alt="">
-                                <div class="grid-image-overlay">
-                                    <div class="overlay-text">
-                                        <ul class="social-media-links">
-                                            <li><a href="https://github.com/aryamaanthakur" target="_blank"><img src="images/github.png" alt=""></a></li>
-                                            <li><a href="https://linkedin.com/aryamaanthakur" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
-                                            <!-- <li><a href="https://aryamaanthakur.github.io" target="_blank"><img src="images/website.png" alt=""></a></li> -->
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">panda1729</div>
-                        </div>
-                        <div class="grid-cell">
                             <div class="grid-image"><img src="images/ayelmao.jpg" alt="">
                                 <div class="grid-image-overlay">
                                     <div class="overlay-text">
@@ -154,45 +140,6 @@ layout: blank
                             <div class="grid-content">Dr.D0NN4</div>
                         </div>
                         <div class="grid-cell">
-                            <div class="grid-image"><img src="images/onyx.jpg" alt="">
-                                <div class="grid-image-overlay">
-                                    <div class="overlay-text">
-                                        <ul class="social-media-links">
-                                            <li><a href="https://github.com/malav22" target="_blank"><img src="images/github.png" alt=""></a></li>
-                                            <li><a href="https://www.linkedin.com/in/malav-thakkar-011517200" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">Onyx</div>
-                        </div>
-                        <div class="grid-cell">
-                            <div class="grid-image"><img src="images/coded.jpg" alt="">
-                                <div class="grid-image-overlay">
-                                    <div class="overlay-text">
-                                        <ul class="social-media-links">
-                                            <li><a href="https://github.com/CodedStrawhat" target="_blank"><img src="images/github.png" alt=""></a></li>
-                                            <li><a href="https://www.linkedin.com/in/viresh-singh-panwar-1b9659205/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">Coded_Strawhat</div>
-                        </div>
-                        <div class="grid-cell">
-                            <div class="grid-image"><img src="images/mars.jpg" alt="">
-                                <div class="grid-image-overlay">
-                                    <div class="overlay-text">
-                                        <ul class="social-media-links">
-                                            <li><a href="https://github.com/MariaRose3" target="_blank"><img src="images/github.png" alt=""></a></li>
-                                            <li><a href="https://www.linkedin.com/in/maria-rose-446675204/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">Mars_</div>
-                        </div>
-                        <div class="grid-cell">
                             <div class="grid-image"><img src="images/v1per.png" alt="">
                                 <div class="grid-image-overlay">
                                     <div class="overlay-text">
@@ -204,19 +151,6 @@ layout: blank
                                 </div>
                             </div>
                             <div class="grid-content">v1per</div>
-                        </div>
-                        <div class="grid-cell">
-                            <div class="grid-image"><img src="images/drdrunkhigh.png" alt="">
-                                <div class="grid-image-overlay">
-                                    <div class="overlay-text">
-                                        <ul class="social-media-links">
-                                            <li><a href="https://github.com/jhaprashant079" target="_blank"><img src="images/github.png" alt=""></a></li>
-                                            <li><a href="https://www.linkedin.com/in/prashant-kumar-jha-747504205/" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">Dr. DrunkHigh</div>
                         </div>
                         <div class="grid-cell">
                             <div class="grid-image"><img src="images/Alphx.jpeg" alt="">
@@ -243,19 +177,6 @@ layout: blank
                                 </div>
                             </div>
                             <div class="grid-content">Dark Demian</div>
-                        </div>
-                        <div class="grid-cell">
-                            <div class="grid-image"><img src="images/cicada.jpg" alt="">
-                                <div class="grid-image-overlay">
-                                    <div class="overlay-text">
-                                        <ul class="social-media-links">
-                                            <li><a href="https://github.com/arjun118/" target="_blank"><img src="images/github.png" alt=""></a></li>
-                                            <li><a href="https://www.linkedin.com/in/vtr-ch-a2aa07204" target="_blank"><img src="images/linkedin.png" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">$lim_$h4d¥</div>
                         </div>
                         <div class="grid-cell">
                             <div class="grid-image"><img src="images/otaku.png" alt="">
